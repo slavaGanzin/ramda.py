@@ -1,6 +1,7 @@
 from .adjust import adjust
 from pyramda.private.asserts import assert_iterables_equal
 
+
 def add_one(x):
     return x + 1
 
