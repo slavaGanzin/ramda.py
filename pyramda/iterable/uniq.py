@@ -1,2 +1,3 @@
 """This functions removed duplicated from given list"""
-uniq = lambda xs: list(set(xs))
+def uniq(xs):
+    return list(set(xs))
