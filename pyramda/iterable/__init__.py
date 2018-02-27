@@ -16,3 +16,6 @@ from .flatten import flatten
 from .reject import reject
 from .times import times
 from .adjust import adjust
+from .zipObj import zipObj
+from .zipWith import zipWith
+from .uniq import uniq
