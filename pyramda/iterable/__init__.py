@@ -15,3 +15,4 @@ from .for_each import for_each
 from .flatten import flatten
 from .reject import reject
 from .times import times
+from .adjust import adjust
