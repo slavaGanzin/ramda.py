@@ -14,3 +14,4 @@ from .take import take
 from .for_each import for_each
 from .flatten import flatten
 from .reject import reject
+from .times import times
