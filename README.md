@@ -71,6 +71,7 @@ zip_with :: f -> [a] -> [b] -> [c]
 times :: Number -> [a]
 xprod :: [a] -> [b] -> [c]
 without :: [a] -> [b] -> [c]
+update :: Number -> Number -> [a] -> [b]
 ```
 
 Logic
