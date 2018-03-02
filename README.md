@@ -70,6 +70,7 @@ zip_obj :: [a] -> [b] -> [c]
 zip_with :: f -> [a] -> [b] -> [c]
 times :: Number -> [a]
 xprod :: [a] -> [b] -> [c]
+without :: [a] -> [b] -> [c]
 ```
 
 Logic
