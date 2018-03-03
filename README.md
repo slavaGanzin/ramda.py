@@ -117,6 +117,7 @@ lt :: Ord a => Relation a
 lte :: Ord a => Relation a
 max :: Ord a => Reduction a
 min :: Ord a => Reduction a
+identity :: a -> a
 ```
 
 Other
