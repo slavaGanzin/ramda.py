@@ -60,6 +60,7 @@ cons :: a -> [a] -> [a]
 contains :: a -> Predicate [a]
 contains_with :: Relation a -> a -> Predicate [a]
 drop :: Number -> [a] -> [a]
+drop_last :: Number -> [a] -> [a]
 filter :: Predicate a -> [a] -> [a]
 find :: Predicate a -> Reduction a
 map :: (a -> b) -> [a] -> [b]
