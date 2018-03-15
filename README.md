@@ -87,6 +87,7 @@ either :: Operation (Predicate a)
 if_else :: Predicate a -> Operation (a -> a)
 not_func :: Boolean -> Boolean
 or_func :: Operation Boolean
+empty :: a -> Boolean
 ```
 
 Math
