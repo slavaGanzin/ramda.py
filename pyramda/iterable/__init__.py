@@ -22,3 +22,4 @@ from .uniq import uniq
 from .xprod import xprod
 from .without import without
 from .drop_last import drop_last
+from .join import join

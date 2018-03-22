@@ -73,6 +73,7 @@ times :: Number -> [a]
 xprod :: [a] -> [b] -> [c]
 without :: [a] -> [b] -> [c]
 update :: Number -> Number -> [a] -> [b]
+join :: [a] -> [b] -> c
 ```
 
 Logic
