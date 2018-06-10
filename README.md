@@ -65,6 +65,7 @@ find :: Predicate a -> Reduction a
 map :: (a -> b) -> [a] -> [b]
 reduce :: (a -> b -> b) -> a -> [b] -> a
 take :: Number -> [a] -> [a]
+pluck :: k -> [a] -> [b]
 ```
 
 Logic
