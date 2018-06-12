@@ -14,6 +14,7 @@ from .take import take
 from .for_each import for_each
 from .flatten import flatten
 from .reject import reject
+from .pluck import pluck
 from .times import times
 from .adjust import adjust
 from .zip_obj import zip_obj

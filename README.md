@@ -66,6 +66,7 @@ find :: Predicate a -> Reduction a
 map :: (a -> b) -> [a] -> [b]
 reduce :: (a -> b -> b) -> a -> [b] -> a
 take :: Number -> [a] -> [a]
+pluck :: k -> [a] -> [b]
 uniq :: [a] -> [b]
 zip_obj :: [a] -> [b] -> [c]
 zip_with :: f -> [a] -> [b] -> [c]
