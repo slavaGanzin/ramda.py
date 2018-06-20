@@ -11,8 +11,4 @@ def sub(x, y):
 
 
 def juxt_nocurry_test():
-    assert_equal(juxt([add, sub], [1, 2]), [3,-1])
-
-
-def juxt_curry_test():
-    assert_equal(juxt([add, sub])([1, 2]), [3, -1])
+    assert_equal(juxt([add, sub])(1, 2), [3,-1])

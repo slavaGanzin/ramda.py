@@ -1,6 +1,2 @@
-from .curry import curry
-
-
-@curry
-def juxt(fs, args):
-    return [f(*args) for f in fs]
+def juxt(fs):
+    return lambda *args: [f(*args) for f in fs]
