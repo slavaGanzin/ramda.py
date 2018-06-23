@@ -129,6 +129,6 @@ identity :: a -> a
 Other
 
 ```
-getattr :: attr : String -> Object { attr :: a | * } -> a
+prop :: attr : String -> Object { attr :: a | * } -> a
 isinstance :: Class -> Predicate a
 ```
