@@ -126,6 +126,11 @@ min :: Ord a => Reduction a
 identity :: a -> a
 ```
 
+String
+```
+replace :: String -> String
+```
+
 Other
 
 ```

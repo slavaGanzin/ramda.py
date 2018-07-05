@@ -4,6 +4,7 @@ from .iterable import *
 from .logic import *
 from .math import *
 from .relation import *
+from .string import *
 
 from .prop import prop
 from .isinstance import isinstance
