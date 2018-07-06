@@ -7,3 +7,4 @@ from .pipe import pipe
 from .tap import tap
 from .flip import flip
 from .juxt import juxt
+from .clone import clone
