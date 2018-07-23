@@ -1,6 +1,7 @@
 from pyramda.function.curry import curry
 import builtins
 
+
 @curry
 def prop(name, o):
     try:
