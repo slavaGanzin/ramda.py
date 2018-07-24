@@ -6,7 +6,7 @@ from subprocess import call
 class PasteurizeBuildCommand(build_py):
     def run(self):
         call(["pip", "install", "future"])
-        call(["pasteurize", "./pyramda"])
+        call(["pasteurize", "./ramda"])
         build_py.run(self)
 
 
@@ -18,15 +18,15 @@ setup(
     author='Slava Ganzin',
     author_email='slava.ganzin@gmail.com',
     packages=[
-        'pyramda',
-        'pyramda.dictionary',
-        'pyramda.function',
-        'pyramda.iterable',
-        'pyramda.logic',
-        'pyramda.math',
-        'pyramda.private',
-        'pyramda.private.curry_spec',
-        'pyramda.relation'
+        'ramda',
+        'ramda.dictionary',
+        'ramda.function',
+        'ramda.iterable',
+        'ramda.logic',
+        'ramda.math',
+        'ramda.private',
+        'ramda.private.curry_spec',
+        'ramda.relation'
     ],
     install_requires=['future'],
     tests_require=['nose', 'coverage', 'mock'],
