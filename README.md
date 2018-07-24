@@ -1,4 +1,4 @@
-# ramda [![Build Status](https://travis-ci.org/slavaGanzin/pyramda.svg?branch=master)](https://travis-ci.org/slavaGanzin/pyramda) 
+# ramda [![Build Status](https://travis-ci.org/slavaGanzin/pyramda.svg?branch=master)](https://travis-ci.org/slavaGanzin/pyramda)
 <!-- ##[![Coverage Status](https://coveralls.io/repos/jackfirth/ramda/badge.svg?branch=master&service=github)](https://coveralls.io/github/jackfirth/ramda?branch=master) -->
 
 Python package supporting heavy functional programming through currying and function composition. Translation of the Ramda library from javascript to python. Supports Python 2/3.
@@ -78,6 +78,7 @@ xprod :: [a] -> [b] -> [c]
 without :: [a] -> [b] -> [c]
 update :: Number -> Number -> [a] -> [b]
 join :: [a] -> [b] -> c
+aperture :: Number → [a] → [[a]]
 ```
 
 Logic
