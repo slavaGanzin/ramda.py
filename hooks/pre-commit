@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 
-nosetests
-pycodestyle
+pycodestyle && nosetests && git push
+
