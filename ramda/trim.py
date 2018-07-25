@@ -2,4 +2,4 @@
 
 
 def trim(x):
-    return str(x).strip()
+    return x.strip()
