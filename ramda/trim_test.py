@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from .trim import trim
 from ramda.private.asserts import assert_equal
 
