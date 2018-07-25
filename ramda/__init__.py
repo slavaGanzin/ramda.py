@@ -63,6 +63,7 @@ from .sum import sum
 from .take import take
 from .tap import tap
 from .times import times
+from .trim import trim
 from .uniq import uniq
 from .values import values
 from .without import without
