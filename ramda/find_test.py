@@ -12,3 +12,10 @@ def find_nocurry_test():
 
 def find_curry_test():
     assert_equal(find(positive)([-2, -1, 0, 1, 2]), 1)
+
+
+def not_found_test():
+    try:
+        find(positive, [])
+    except ValueError:
+        assert_equal(True, True)

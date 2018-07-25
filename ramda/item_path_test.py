@@ -18,3 +18,10 @@ def item_path_nocurry_test():
 def item_path_curry_test():
     get_abc = item_path(["a", "b", "c"])
     assert_equal(get_abc(test_dict), "foo")
+
+
+def item_path_throws_test():
+    try:
+        item_path([], test_dict)
+    except ValueError:
+        assert_equal(True, True)
