@@ -1,4 +1,4 @@
-from ramda.function.curry import curry
+from ramda.curry import curry
 import builtins
 
 
