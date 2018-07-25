@@ -17,7 +17,6 @@ pip install ramda
 >>> incEach([1, 2, 3])
 [2, 3, 4]
 ```
-
 ### Provided functions
 
 Type Synonyms
