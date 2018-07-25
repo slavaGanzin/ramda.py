@@ -1,5 +1,4 @@
-# ramda [![Build Status](https://travis-ci.org/slavaGanzin/pyramda.svg?branch=master)](https://travis-ci.org/slavaGanzin/pyramda)
-<!-- ##[![Coverage Status](https://coveralls.io/repos/jackfirth/ramda/badge.svg?branch=master&service=github)](https://coveralls.io/github/jackfirth/ramda?branch=master) -->
+# ramda [![Build Status](https://travis-ci.org/slavaGanzin/pyramda.svg?branch=master)](https://travis-ci.org/slavaGanzin/pyramda) [![Coverage Status](https://coveralls.io/repos/slavaGanzin/pyramda/badge.svg?branch=master&service=github)](https://coveralls.io/github/slavaGanzin/pyramda?branch=master)
 
 Python package supporting heavy functional programming through currying and function composition. Translation of the Ramda library from javascript to python. Supports Python 2/3.
 
