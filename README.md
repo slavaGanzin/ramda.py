@@ -2,7 +2,7 @@
 
 Python Clone of [Ramda.js](http://ramdajs.com)
 
-``
+```sh
 pip install ramda
 ```
 
