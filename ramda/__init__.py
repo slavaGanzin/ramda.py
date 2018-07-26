@@ -5,7 +5,7 @@ from .all import all
 from .always import always
 from .and_func import and_func
 from .any_pass import any_pass
-from .any_satisfy import any_satisfy
+from .any import any
 from .apply import apply
 from .both import both
 from .chain import chain
