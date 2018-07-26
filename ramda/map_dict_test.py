@@ -1,7 +1,7 @@
 from .map_dict import map_dict
 from .values import values
 from .inc import inc
-from .private.asserts import assert_dicts_equal
+from ramda.private.asserts import assert_dicts_equal
 
 
 test_dict = {

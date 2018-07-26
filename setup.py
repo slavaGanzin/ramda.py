@@ -12,13 +12,15 @@ class PasteurizeBuildCommand(build_py):
 
 setup(
     name='ramda',
-    version='0.2.1',
-    description='A Python package for curried functional programming',
-    url='http://github.com/slavaGanzin/pyramda',
+    version='0.2.2.1',
+    description='Python clone of ramda.js (ramdajs.com)',
+    url='http://github.com/slavaGanzin/ramda.py',
     author='Slava Ganzin',
     author_email='slava.ganzin@gmail.com',
     packages=[
         'ramda',
+        'ramda.private',
+        'ramda.private.curry_spec',
     ],
     install_requires=['future'],
     tests_require=['nose', 'coverage', 'mock'],

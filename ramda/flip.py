@@ -3,7 +3,7 @@ from .curry import (
     curry_by_spec,
 )
 
-from .private.curry_spec import make_func_curry_spec
+from ramda.private.curry_spec import make_func_curry_spec
 
 
 @curry
