@@ -2,5 +2,19 @@
 
 Python Clone of [Ramda.js](http://ramdajs.com)
 
+``
+pip install ramda
+```
+
+```python
+>>> from ramda import *
+>>> inc(1)
+2
+>>> map(inc, [1, 2, 3])
+[2, 3, 4]
+>>> incEach = map(inc)
+>>> incEach([1, 2, 3])
+[2, 3, 4]
+```
 
 Improved fork of [Jack Firth's original impementation](https://github.com/jackfirth/pyramda)
