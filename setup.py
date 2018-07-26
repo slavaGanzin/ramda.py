@@ -12,7 +12,7 @@ class PasteurizeBuildCommand(build_py):
 
 setup(
     name='ramda',
-    version='0.2',
+    version='0.2.1',
     description='A Python package for curried functional programming',
     url='http://github.com/slavaGanzin/pyramda',
     author='Slava Ganzin',
