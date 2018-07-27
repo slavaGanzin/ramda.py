@@ -1,5 +1,5 @@
 from .filter import filter
-from ramda.private.asserts import assert_iterables_equal
+from ramda.private.asserts import assert_equal
 
 
 def positive(x):
@@ -7,8 +7,12 @@ def positive(x):
 
 
 def filter_nocurry_test():
-    assert_iterables_equal(filter(positive, [2, -1, 0, 3, -2]), [2, 3])
+    assert_equal(filter(positive, [2, -1, 0, 3, -2]), [2, 3])
 
 
 def filter_curry_test():
-    assert_iterables_equal(filter(positive)([2, -1, 0, 3, -2]), [2, 3])
+    assert_equal(filter(positive)([2, -1, 0, 3, -2]), [2, 3])
+
+
+def filter_curry_noniterable_test():
+    assert_equal(filter(positive)(123), [])

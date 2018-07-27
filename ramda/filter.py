@@ -1,4 +1,9 @@
 from ramda.curry import curry
 
 
-filter = curry(lambda p, xs: [x for x in xs if p(x)])
+@curry
+def filter(p, xs):
+    if not hasattr(xs, '__iter__'):
+        return []
+
+    return [x for x in xs if p(x)]
