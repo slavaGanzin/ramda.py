@@ -2,12 +2,8 @@ from .ap import ap
 from .multiply import multiply
 from .add import add
 from .concat import concat
-# from .to_upper import to_upper
+from .to_upper import to_upper
 from ramda.private.asserts import *
-
-
-def to_upper(string):
-    return string.upper()
 
 
 def ap_nocurry_test():
