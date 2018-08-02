@@ -2,5 +2,5 @@ from .curry import curry
 
 
 @curry
-def apply(f, args):
-    return f(*args)
+def apply(f, xs):
+    return f(*xs)

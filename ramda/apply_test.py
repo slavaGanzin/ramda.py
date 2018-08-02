@@ -1,9 +1,6 @@
 from .apply import apply
+from .add import add
 from ramda.private.asserts import assert_equal
-
-
-def add(x, y):
-    return x + y
 
 
 def apply_nocurry_test():
