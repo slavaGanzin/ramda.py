@@ -1,4 +1,14 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
+
+init=ramda/__init__.py
+rm $init
+
+for i in ramda/*.py; do
+  if [[ $i != *"test"* ]]; then
+    name=`echo $i | sed -e 's/.py$//' -e 's/ramda\///'`
+    echo "from .$name import $name" >> $init
+  fi
+done
 
 nosetests && pycodestyle
 
