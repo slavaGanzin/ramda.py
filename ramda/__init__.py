@@ -13,6 +13,7 @@ from .apply import apply
 from .apply_to import apply_to
 from .assoc import assoc
 from .assoc_path import assoc_path
+from .binary import binary
 from .both import both
 from .chain import chain
 from .clone import clone

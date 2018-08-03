@@ -11,13 +11,20 @@ takes_no_arg = nAry(0, takes_two_args)
 takes_one_arg = nAry(1, takes_two_args)
 
 
+@nAry(3)
+def takes_three_args(a, b):
+    return [a, b]
+
+
 def n_args(f):
     return len(inspect.signature(f).parameters)
 
 
 def nAry_curry_test():
-    assert_equal(n_args(takes_two_args), 2)
     assert_equal(n_args(takes_one_arg), 1)
+    assert_equal(n_args(takes_three_args), 3)
+    assert_equal(n_args(takes_two_args), 2)
+
     assert_equal(takes_one_arg(1), [1, None])
     try:
         takes_one_arg(1, 2, 3)
@@ -39,13 +46,9 @@ def nAry_curry_test():
         pass
 
     try:
-        nAry(-1)(print)
+        nAry(-1)(lambda: 1)
         assert False, 'nAry(-1)(print) should throw'
     except ValueError:
         pass
 
-    try:
-        nAry(11)(print)
-        assert False, 'nAry(11)(print) should throw'
-    except ValueError:
-        pass
+    assert_equal(nAry(20)(lambda: 1)(*range(0, 20)), 1)
