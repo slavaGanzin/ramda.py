@@ -60,6 +60,7 @@ from .mean import mean
 from .min import min
 from .modulo import modulo
 from .multiply import multiply
+from .nAry import nAry
 from .negate import negate
 from .not_func import not_func
 from .or_func import or_func
