@@ -14,6 +14,7 @@ from .apply_to import apply_to
 from .assoc import assoc
 from .assoc_path import assoc_path
 from .binary import binary
+from .bind import bind
 from .both import both
 from .chain import chain
 from .clone import clone
