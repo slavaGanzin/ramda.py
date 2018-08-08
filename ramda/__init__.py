@@ -16,7 +16,9 @@ from .assoc_path import assoc_path
 from .binary import binary
 from .bind import bind
 from .both import both
+from .call import call
 from .chain import chain
+from .clamp import clamp
 from .clone import clone
 from .complement import complement
 from .compose import compose
