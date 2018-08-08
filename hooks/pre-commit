@@ -10,5 +10,6 @@ for i in ramda/*.py; do
   fi
 done
 
+git add $init
 nosetests && pycodestyle
 

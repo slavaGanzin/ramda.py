@@ -23,6 +23,7 @@ from .clone import clone
 from .complement import complement
 from .compose import compose
 from .concat import concat
+from .cond import cond
 from .cons import cons
 from .contains import contains
 from .contains_with import contains_with
