@@ -2,16 +2,12 @@ from ramda.private.asserts import *
 from ramda.cond import cond
 from ramda.always import always
 from ramda.equals import equals
-
-
-def nothing(temp):
-    return 'nothing special happens at ' + str(temp) + '°C'
-
+from ramda.T import T
 
 f = cond([
     (equals(0), always('water freezes at 0°C')),
     (equals(100), always('water boils at 100°C')),
-    (always(True), nothing)
+    (T, lambda temp: 'nothing special happens at ' + str(temp) + '°C')
 ])
 
 
