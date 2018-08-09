@@ -1,4 +1,4 @@
-from .n_ary import nAry
+from .n_ary import n_ary
 
 
 def binary(f):
