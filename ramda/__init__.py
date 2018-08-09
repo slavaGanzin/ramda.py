@@ -57,6 +57,7 @@ from .item_path import item_path
 from .join import join
 from .juxt import juxt
 from .keys import keys
+from .length import length
 from .lesser import lesser
 from .lt import lt
 from .lte import lte
