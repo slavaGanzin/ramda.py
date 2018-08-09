@@ -1,4 +1,6 @@
 from ramda.curry import curry
 
 
-equals = curry(lambda x, y: x == y)
+@curry
+def equals(x, y):
+    return x == y
