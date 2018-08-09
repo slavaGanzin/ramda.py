@@ -12,10 +12,10 @@ def generate_args(spec, n):
 
 
 @curry
-def nAry(n, f):
+def n_ary(n, f):
     if n < 0:
         raise ValueError(
-            'First argument to nAry must be a non-negative integer'
+            'First argument to n_ary must be a non-negative integer'
         )
 
     args1, args2 = generate_args(inspect.getfullargspec(f), n)

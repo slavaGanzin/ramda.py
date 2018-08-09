@@ -30,7 +30,9 @@ from .cons import cons
 from .contains import contains
 from .contains_with import contains_with
 from .converge import converge
+from .count_by import count_by
 from .curry import curry
+from .curry_n import curry_n
 from .dec import dec
 from .divide import divide
 from .drop import drop
@@ -69,7 +71,7 @@ from .mean import mean
 from .min import min
 from .modulo import modulo
 from .multiply import multiply
-from .nAry import nAry
+from .n_ary import n_ary
 from .negate import negate
 from .not_func import not_func
 from .or_func import or_func

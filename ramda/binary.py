@@ -1,5 +1,5 @@
-from .nAry import nAry
+from .n_ary import nAry
 
 
 def binary(f):
-    return nAry(2, f)
+    return n_ary(2, f)
