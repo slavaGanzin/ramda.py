@@ -29,6 +29,7 @@ from .cond import cond
 from .cons import cons
 from .contains import contains
 from .contains_with import contains_with
+from .converge import converge
 from .curry import curry
 from .dec import dec
 from .divide import divide
@@ -84,6 +85,7 @@ from .sum import sum
 from .take import take
 from .tap import tap
 from .times import times
+from .to_lower import to_lower
 from .to_upper import to_upper
 from .trim import trim
 from .uniq import uniq
