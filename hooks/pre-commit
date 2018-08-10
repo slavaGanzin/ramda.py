@@ -11,5 +11,5 @@ for i in ramda/*.py; do
 done
 
 git add $init
-nosetests && pycodestyle
+nosetests --with-coverage && pycodestyle
 
