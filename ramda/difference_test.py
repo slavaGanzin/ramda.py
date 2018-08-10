@@ -9,3 +9,7 @@ def difference_test():
         [{'a': 1}, {'b': 2}], [{'a': 1}, {'c': 3}]),
         [{'b': 2}]
     )
+    assert_equal(difference(
+        [1, 2, 1], [3]),
+        [1, 2]
+    )
