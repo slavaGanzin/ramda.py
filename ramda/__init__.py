@@ -34,6 +34,7 @@ from .count_by import count_by
 from .curry import curry
 from .curry_n import curry_n
 from .dec import dec
+from .default_to import default_to
 from .divide import divide
 from .drop import drop
 from .drop_last import drop_last
