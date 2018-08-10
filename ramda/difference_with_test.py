@@ -31,3 +31,7 @@ def difference_with_curry_test():
         difference_with(complement(cmp))(l1, l1),
         []
     )
+    assert_equal(
+        difference_with(cmp)(l2)(l1),
+        [{'a': 4}]
+    )
