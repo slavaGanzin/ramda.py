@@ -36,6 +36,7 @@ from .curry_n import curry_n
 from .dec import dec
 from .default_to import default_to
 from .difference import difference
+from .difference_with import difference_with
 from .divide import divide
 from .drop import drop
 from .drop_last import drop_last
