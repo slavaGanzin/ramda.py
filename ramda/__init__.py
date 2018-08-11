@@ -42,6 +42,7 @@ from .dissoc_path import dissoc_path
 from .divide import divide
 from .drop import drop
 from .drop_last import drop_last
+from .drop_last_while import drop_last_while
 from .either import either
 from .empty import empty
 from .equals import equals

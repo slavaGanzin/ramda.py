@@ -1,5 +1,5 @@
-from .drop_last import drop_last
-from ramda.private.asserts import assert_iterables_equal
+from ramda.drop_last import drop_last
+from ramda.private.asserts import *
 
 
 def drop_nocurry_test():
