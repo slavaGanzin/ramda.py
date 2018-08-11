@@ -38,6 +38,7 @@ from .default_to import default_to
 from .difference import difference
 from .difference_with import difference_with
 from .dissoc import dissoc
+from .dissoc_path import dissoc_path
 from .divide import divide
 from .drop import drop
 from .drop_last import drop_last
