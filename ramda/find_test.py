@@ -15,7 +15,4 @@ def find_curry_test():
 
 
 def not_found_test():
-    try:
-        find(positive, [])
-    except ValueError:
-        assert_equal(True, True)
+    assert_equal(find(positive, []), None)
