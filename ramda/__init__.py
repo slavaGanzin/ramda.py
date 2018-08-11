@@ -50,6 +50,7 @@ from .either import either
 from .empty import empty
 from .ends_with import ends_with
 from .eq_by import eq_by
+from .eq_props import eq_props
 from .equals import equals
 from .filter import filter
 from .find import find
