@@ -2,5 +2,5 @@ from ramda.curry import curry
 
 
 @curry
-def either(p1, p2, v):
-    return p1(v) or p2(v)
+def either(predicate1, predicate2, value):
+    return predicate1(value) or predicate2(value)
