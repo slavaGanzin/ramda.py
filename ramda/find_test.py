@@ -1,4 +1,4 @@
-from .find import find
+from ramda.find import find
 from ramda.private.asserts import assert_equal
 
 

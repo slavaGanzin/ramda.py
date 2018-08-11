@@ -56,6 +56,8 @@ from .evolve import evolve
 from .filter import filter
 from .find import find
 from .find_index import find_index
+from .find_last import find_last
+from .find_last_index import find_last_index
 from .flatten import flatten
 from .flip import flip
 from .for_each import for_each
