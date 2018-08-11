@@ -52,6 +52,7 @@ from .ends_with import ends_with
 from .eq_by import eq_by
 from .eq_props import eq_props
 from .equals import equals
+from .evolve import evolve
 from .filter import filter
 from .find import find
 from .flatten import flatten
@@ -67,7 +68,6 @@ from .identity import identity
 from .if_else import if_else
 from .inc import inc
 from .isinstance import isinstance
-from .item_path import item_path
 from .join import join
 from .juxt import juxt
 from .keys import keys
@@ -87,6 +87,7 @@ from .n_ary import n_ary
 from .negate import negate
 from .not_func import not_func
 from .or_func import or_func
+from .path import path
 from .pick import pick
 from .pipe import pipe
 from .pluck import pluck

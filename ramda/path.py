@@ -2,7 +2,7 @@ from ramda.curry import curry
 
 
 @curry
-def item_path(keys, dict):
+def path(keys, dict):
     if not keys:
         raise ValueError("Expected at least one key, got {0}".format(keys))
     current_value = dict
