@@ -65,6 +65,7 @@ from .from_pairs import from_pairs
 from .getitem import getitem
 from .greater import greater
 from .group_by import group_by
+from .group_with import group_with
 from .gt import gt
 from .gte import gte
 from .identical import identical
