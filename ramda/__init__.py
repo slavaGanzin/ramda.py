@@ -48,6 +48,7 @@ from .drop_repeats_with import drop_repeats_with
 from .drop_while import drop_while
 from .either import either
 from .empty import empty
+from .ends_with import ends_with
 from .eq_by import eq_by
 from .equals import equals
 from .filter import filter
