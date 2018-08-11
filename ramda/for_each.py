@@ -1,5 +1,5 @@
-from .curry import curry
-from .map import map
+from ramda.curry import curry
+from ramda.map import map
 
 
 @curry
