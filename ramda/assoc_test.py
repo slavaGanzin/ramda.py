@@ -1,5 +1,5 @@
 from .assoc import assoc
-from ramda.private.asserts import assert_equal
+from ramda.private.asserts import *
 
 
 def assoc_nocurry_test():

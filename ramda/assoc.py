@@ -3,7 +3,7 @@ from ramda.clone import clone
 
 
 @curry
-def assoc(k, v, o):
-    o = clone(o)
-    o[k] = v
+def assoc(key, value, object):
+    o = clone(object)
+    o[key] = value
     return o
