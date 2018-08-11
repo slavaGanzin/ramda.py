@@ -43,9 +43,12 @@ from .divide import divide
 from .drop import drop
 from .drop_last import drop_last
 from .drop_last_while import drop_last_while
+from .drop_repeats import drop_repeats
+from .drop_repeats_with import drop_repeats_with
 from .drop_while import drop_while
 from .either import either
 from .empty import empty
+from .eq_by import eq_by
 from .equals import equals
 from .filter import filter
 from .find import find
