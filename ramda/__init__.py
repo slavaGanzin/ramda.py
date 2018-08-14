@@ -68,6 +68,7 @@ from .group_by import group_by
 from .group_with import group_with
 from .gt import gt
 from .gte import gte
+from .has import has
 from .identical import identical
 from .identity import identity
 from .if_else import if_else
