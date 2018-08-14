@@ -1,5 +1,5 @@
-from .map import map
-from ramda.private.asserts import assert_iterables_equal
+from ramda.map import map
+from ramda.private.asserts import *
 
 
 def add1(x):
