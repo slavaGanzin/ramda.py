@@ -2,5 +2,5 @@ from ramda.curry import curry
 
 
 @curry
-def if_else(p, then_func, else_func, v):
-    return then_func(v) if p(v) else else_func(v)
+def if_else(predicate, on_true_func, on_false_func, value):
+    return on_true_func(value) if predicate(value) else on_false_func(value)
