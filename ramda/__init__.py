@@ -76,6 +76,7 @@ from .if_else import if_else
 from .inc import inc
 from .index_by import index_by
 from .index_of import index_of
+from .init import init
 from .isinstance import isinstance
 from .join import join
 from .juxt import juxt

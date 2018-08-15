@@ -13,5 +13,5 @@ def index_by_test():
             {'id': 'abc', 'title': 'B'},
         'xyz':
             {'id': 'xyz', 'title': 'A'}
-          }
+    }
     assert_equal(index_by(prop('id'), list), out)
