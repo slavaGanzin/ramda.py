@@ -80,6 +80,8 @@ from .init import init
 from .inner_join import inner_join
 from .insert import insert
 from .insert_all import insert_all
+from .intersection import intersection
+from .intersperse import intersperse
 from .isinstance import isinstance
 from .join import join
 from .juxt import juxt
