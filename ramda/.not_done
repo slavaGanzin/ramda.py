@@ -10,3 +10,4 @@ comparator
 descend
 forEachObjIndexed
 has_in
+into

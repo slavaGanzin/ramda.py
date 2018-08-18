@@ -10,7 +10,4 @@ def intesperse_test():
         def intersperse(self, separator):
             return[separator for x in xs]
 
-    assert_equal(intersperse(
-        'n',
-        XS()),
-        ['n', 'n', 'n'])
+    assert_equal(intersperse('n', XS()), ['n', 'n', 'n'])

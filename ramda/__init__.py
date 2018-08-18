@@ -82,6 +82,7 @@ from .insert import insert
 from .insert_all import insert_all
 from .intersection import intersection
 from .intersperse import intersperse
+from .invert_obj import invert_obj
 from .isinstance import isinstance
 from .join import join
 from .juxt import juxt
