@@ -115,6 +115,7 @@ from .reject import reject
 from .replace import replace
 from .subtract import subtract
 from .sum import sum
+from .tail import tail
 from .take import take
 from .tap import tap
 from .times import times
