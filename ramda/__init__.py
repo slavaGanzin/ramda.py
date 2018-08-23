@@ -92,6 +92,7 @@ from .join import join
 from .juxt import juxt
 from .keys import keys
 from .last import last
+from .last_index_of import last_index_of
 from .length import length
 from .lesser import lesser
 from .lt import lt
