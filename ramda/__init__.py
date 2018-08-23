@@ -91,6 +91,7 @@ from .isinstance import isinstance
 from .join import join
 from .juxt import juxt
 from .keys import keys
+from .last import last
 from .length import length
 from .lesser import lesser
 from .lt import lt
