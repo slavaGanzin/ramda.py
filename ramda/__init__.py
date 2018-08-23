@@ -98,9 +98,10 @@ from .lesser import lesser
 from .lt import lt
 from .lte import lte
 from .map import map
-from .map_dict import map_dict
+from .map_obj_indexed import map_obj_indexed
 from .match import match
 from .max import max
+from .max_by import max_by
 from .mean import mean
 from .min import min
 from .modulo import modulo

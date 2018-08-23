@@ -12,3 +12,12 @@ forEachObjIndexed
 has_in
 into
 keys_in
+lens
+lensIndex
+lensPath
+lensProp
+lift
+liftN
+mapAccum
+mapAccumRight
+mathMod

@@ -1,4 +1,4 @@
-from .map_dict import map_dict
+from .map_obj_indexed import map_obj_indexed
 from .values import values
 from .inc import inc
 from ramda.private.asserts import assert_dicts_equal
@@ -18,4 +18,4 @@ expected_dict = {
 
 
 def map_dict_test():
-    assert_dicts_equal(map_dict(inc, test_dict), expected_dict)
+    assert_dicts_equal(map_obj_indexed(inc, test_dict), expected_dict)
