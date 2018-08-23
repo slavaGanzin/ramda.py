@@ -1,4 +1,4 @@
-from .mean import mean
+from ramda.mean import mean
 from ramda.private.asserts import assert_equal
 
 

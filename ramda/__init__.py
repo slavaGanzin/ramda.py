@@ -103,6 +103,7 @@ from .match import match
 from .max import max
 from .max_by import max_by
 from .mean import mean
+from .median import median
 from .min import min
 from .modulo import modulo
 from .multiply import multiply
