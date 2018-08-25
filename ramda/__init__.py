@@ -106,6 +106,8 @@ from .mean import mean
 from .median import median
 from .memoize import memoize
 from .memoize_with import memoize_with
+from .merge import merge
+from .merge_all import merge_all
 from .min import min
 from .modulo import modulo
 from .multiply import multiply
