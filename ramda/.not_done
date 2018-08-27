@@ -21,3 +21,9 @@ liftN
 mapAccum
 mapAccumRight
 mathMod
+mergeDeepWithKey
+mergeDeepWith
+mergeDeepRight
+mergeDeepLeft
+mergeWith
+mergeWithKey

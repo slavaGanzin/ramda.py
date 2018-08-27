@@ -109,6 +109,7 @@ from .memoize_with import memoize_with
 from .merge import merge
 from .merge_all import merge_all
 from .min import min
+from .min_by import min_by
 from .modulo import modulo
 from .multiply import multiply
 from .n_ary import n_ary
