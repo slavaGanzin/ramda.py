@@ -116,6 +116,7 @@ from .n_ary import n_ary
 from .negate import negate
 from .none import none
 from .not_func import not_func
+from .nth import nth
 from .or_func import or_func
 from .path import path
 from .pick import pick
