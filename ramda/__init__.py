@@ -114,6 +114,7 @@ from .modulo import modulo
 from .multiply import multiply
 from .n_ary import n_ary
 from .negate import negate
+from .none import none
 from .not_func import not_func
 from .or_func import or_func
 from .path import path

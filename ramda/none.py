@@ -2,8 +2,8 @@ from ramda.curry import curry
 
 
 @curry
-def any(p, xs):
+def none(p, xs):
     for x in xs:
         if p(x):
-            return True
-    return False
+            return False
+    return True

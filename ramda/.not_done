@@ -27,3 +27,4 @@ mergeDeepRight
 mergeDeepLeft
 mergeWith
 mergeWithKey
+modulo
