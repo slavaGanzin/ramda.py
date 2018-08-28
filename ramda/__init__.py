@@ -120,6 +120,7 @@ from .nth import nth
 from .nth_arg import nth_arg
 from .obj_of import obj_of
 from .of import of
+from .omit import omit
 from .or_func import or_func
 from .path import path
 from .pick import pick
