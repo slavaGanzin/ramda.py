@@ -123,6 +123,7 @@ from .of import of
 from .omit import omit
 from .once import once
 from .or_func import or_func
+from .pair import pair
 from .path import path
 from .pick import pick
 from .pipe import pipe

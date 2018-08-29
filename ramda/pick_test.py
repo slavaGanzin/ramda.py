@@ -1,5 +1,5 @@
-from .pick import pick
-from ramda.private.asserts import assert_dicts_equal
+from ramda.pick import pick
+from ramda.private.asserts import *
 
 
 test_dict = {
