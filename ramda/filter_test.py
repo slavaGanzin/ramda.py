@@ -14,6 +14,7 @@ def filter_test():
     assert_equal(filter(positive, [2, -1, 0, 3, -2]), [2, 3])
     assert_equal(filter(positive)([2, -1, 0, 3, -2]), [2, 3])
     assert_equal(filter(positive)(123), [])
-    assert_equal(filter(is_even,
+    assert_equal(filter(
+        is_even,
         {'a': 1, 'b': 2, 'c': 3, 'd': 4}),
         {'b': 2, 'd': 4})

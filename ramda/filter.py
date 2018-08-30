@@ -13,5 +13,4 @@ def filter(p, xs):
                 out[k] = v
         return out
 
-
     return [x for x in xs if p(x)]
