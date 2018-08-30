@@ -125,6 +125,7 @@ from .once import once
 from .or_func import or_func
 from .pair import pair
 from .partial import partial
+from .partition import partition
 from .path import path
 from .pick import pick
 from .pipe import pipe
