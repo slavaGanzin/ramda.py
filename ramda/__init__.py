@@ -127,6 +127,7 @@ from .pair import pair
 from .partial import partial
 from .partition import partition
 from .path import path
+from .path_eq import path_eq
 from .pick import pick
 from .pipe import pipe
 from .pluck import pluck
