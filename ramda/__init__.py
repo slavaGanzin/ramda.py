@@ -128,6 +128,7 @@ from .partial import partial
 from .partition import partition
 from .path import path
 from .path_eq import path_eq
+from .path_or import path_or
 from .pick import pick
 from .pipe import pipe
 from .pluck import pluck
