@@ -134,6 +134,7 @@ from .pick import pick
 from .pick_by import pick_by
 from .pipe import pipe
 from .pluck import pluck
+from .prepend import prepend
 from .product import product
 from .prop import prop
 from .reduce import reduce
