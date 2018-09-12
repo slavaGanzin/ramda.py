@@ -131,6 +131,7 @@ from .path_eq import path_eq
 from .path_or import path_or
 from .path_satisfies import path_satisfies
 from .pick import pick
+from .pick_by import pick_by
 from .pipe import pipe
 from .pluck import pluck
 from .product import product
