@@ -136,6 +136,7 @@ from .pipe import pipe
 from .pluck import pluck
 from .prepend import prepend
 from .product import product
+from .project import project
 from .prop import prop
 from .reduce import reduce
 from .reject import reject
