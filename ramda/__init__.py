@@ -138,6 +138,7 @@ from .prepend import prepend
 from .product import product
 from .project import project
 from .prop import prop
+from .prop_eq import prop_eq
 from .reduce import reduce
 from .reject import reject
 from .replace import replace

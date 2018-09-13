@@ -1,4 +1,4 @@
-from ramda.map import map
+from ramda import *
 from ramda.private.asserts import *
 
 
