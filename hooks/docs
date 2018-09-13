@@ -20,11 +20,11 @@ fs.readdirSync(SOURCES)
     if (!func)
       return console.error(`${name} has no description`)
 
-    const docComment = `\n"""\n${func.description}\n"""\n`
+    const docString = `\n    """${func.description.replace(/\.?\n$/,'')}"""\n`
 
     const modifiedSource = (/"""/.test(source))
-      ? source.replace(/"""(.*\n)*.*"""/gm, docComment)
-      : source.replace(new RegExp(`(def ${name}.*:)\n`, 'gm'), `$1${docComment}`)
+      ? source.replace(/\n\s+"""(.*\n)*.*"""\n/gm, docString)
+      : source.replace(new RegExp(`(def ${name}.*:)\n`, 'gm'), `$1${docString}`)
 
-      fs.writeFileSync(file, modifiedSource)
+      fs.writeFileSync(SOURCES+file, modifiedSource)
   })
