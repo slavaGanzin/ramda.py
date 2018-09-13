@@ -9,4 +9,7 @@ property of that object, if it exists"""
     try:
         return builtins.getattr(o, name)
     except AttributeError:
-        return o[name]
+        try:
+            return o[name]
+        except KeyError:
+            return None
