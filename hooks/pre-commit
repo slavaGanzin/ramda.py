@@ -2,7 +2,6 @@
 
 init=ramda/__init__.py
 rm $init
-
 for i in ramda/*.py; do
   if [[ $i != *"test"* ]]; then
     name=`echo $i | sed -e 's/.py$//' -e 's/ramda\///'`
@@ -11,5 +10,4 @@ for i in ramda/*.py; do
 done
 
 git add $init
-nosetests --with-coverage && pycodestyle
-
+nosetests  -x && pycodestyle && nosetests --with-coverage
