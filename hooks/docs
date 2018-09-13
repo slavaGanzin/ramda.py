@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+
+const fs = require('fs')
+
+const docs = require('../jsdocs.json')
+
+const SOURCES = './ramda/'
+
+fs.readdirSync(SOURCES)
+  .filter(x => /py$/.test(x) && !/test/.test(x))
+  // .map(x => )
+  .map(file => {
+    const name = file.replace(/.py$/, '')
+    const source = fs.readFileSync(SOURCES+file, 'utf8')
+
+    let func = null
+    for (func of docs) {
+      if (func.name == name) break
+    }
+    if (!func)
+      return console.error(`${name} has no description`)
+
+    const docComment = `\n"""\n${func.description}\n"""\n`
+
+    const modifiedSource = (/"""/.test(source))
+      ? source.replace(/"""(.*\n)*.*"""/gm, docComment)
+      : source.replace(new RegExp(`(def ${name}.*:)\n`, 'gm'), `$1${docComment}`)
+
+      fs.writeFileSync(file, modifiedSource)
+  })

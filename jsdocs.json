@@ -1,0 +1,986 @@
+[
+ {
+  "name": "_keys",
+  "description": "Returns a list containing the names of all the enumerable own properties of\nthe supplied object.\nNote that the order of the output array is not guaranteed to be consistent\nacross different JS platforms.\n"
+ },
+ {
+  "name": "_trim",
+  "description": "Removes (strips) whitespace from both ends of the string.\n"
+ },
+ {
+  "name": "add",
+  "description": "Adds two values.\n"
+ },
+ {
+  "name": "add_index",
+  "description": "Creates a new list iteration function from an existing one by adding two new\nparameters to its callback function: the current index, and the entire list.\nThis would turn, for instance, R.map function into one that\nmore closely resembles Array.prototype.map. Note that this will only work\nfor functions in which the iteration callback function is the first\nparameter, and where the list is the last parameter. (This latter might be\nunimportant if the list parameter is not used.)\n"
+ },
+ {
+  "name": "adjust",
+  "description": "Applies a function to the value at the given index of an array, returning a\nnew copy of the array with the element at the given index replaced with the\nresult of the function application.\n"
+ },
+ {
+  "name": "all",
+  "description": "Returns true if all elements of the list match the predicate, false if\nthere are any that don't.\nDispatches to the all method of the second argument, if present.\nActs as a transducer if a transformer is given in list position.\n"
+ },
+ {
+  "name": "all_pass",
+  "description": "Takes a list of predicates and returns a predicate that returns true for a\ngiven list of arguments if every one of the provided predicates is satisfied\nby those arguments.\nThe function returned is a curried function whose arity matches that of the\nhighest-arity predicate.\n"
+ },
+ {
+  "name": "always",
+  "description": "Returns a function that always returns the given value. Note that for\nnon-primitives the value returned is a reference to the original value.\nThis function is known as const, constant, or K (for K combinator) in\nother languages and libraries.\n"
+ },
+ {
+  "name": "and",
+  "description": "Returns true if both arguments are true; false otherwise.\n"
+ },
+ {
+  "name": "any",
+  "description": "Returns true if at least one of elements of the list match the predicate,\nfalse otherwise.\nDispatches to the any method of the second argument, if present.\nActs as a transducer if a transformer is given in list position.\n"
+ },
+ {
+  "name": "any_pass",
+  "description": "Takes a list of predicates and returns a predicate that returns true for a\ngiven list of arguments if at least one of the provided predicates is\nsatisfied by those arguments.\nThe function returned is a curried function whose arity matches that of the\nhighest-arity predicate.\n"
+ },
+ {
+  "name": "ap",
+  "description": "ap applies a list of functions to a list of values.\nDispatches to the ap method of the second argument, if present. Also\ntreats curried functions as applicatives.\n"
+ },
+ {
+  "name": "aperture",
+  "description": "Returns a new list, composed of n-tuples of consecutive elements. If n is\ngreater than the length of the list, an empty list is returned.\nActs as a transducer if a transformer is given in list position.\n"
+ },
+ {
+  "name": "append",
+  "description": "Returns a new list containing the contents of the given list, followed by\nthe given element.\n"
+ },
+ {
+  "name": "apply",
+  "description": "Applies function fn to the argument list args. This is useful for\ncreating a fixed-arity function from a variadic function. fn should be a\nbound function if context is significant.\n"
+ },
+ {
+  "name": "apply_spec",
+  "description": "Given a spec object recursively mapping properties to functions, creates a\nfunction producing an object of the same structure, by mapping each property\nto the result of calling its associated function with the supplied arguments.\n"
+ },
+ {
+  "name": "apply_to",
+  "description": "Takes a value and applies a function to it.\nThis function is also known as the thrush combinator.\n"
+ },
+ {
+  "name": "ascend",
+  "description": "Makes an ascending comparator function out of a function that returns a value\nthat can be compared with < and >.\n"
+ },
+ {
+  "name": "assoc",
+  "description": "Makes a shallow clone of an object, setting or overriding the specified\nproperty with the given value. Note that this copies and flattens prototype\nproperties onto the new object as well. All non-primitive properties are\ncopied by reference.\n"
+ },
+ {
+  "name": "assoc_path",
+  "description": "Makes a shallow clone of an object, setting or overriding the nodes required\nto create the given path, and placing the specific value at the tail end of\nthat path. Note that this copies and flattens prototype properties onto the\nnew object as well. All non-primitive properties are copied by reference.\n"
+ },
+ {
+  "name": "binary",
+  "description": "Wraps a function of any arity (including nullary) in a function that accepts\nexactly 2 parameters. Any extraneous parameters will not be passed to the\nsupplied function.\n"
+ },
+ {
+  "name": "bind",
+  "description": "Creates a function that is bound to a context.\nNote: R.bind does not provide the additional argument-binding capabilities of\nFunction.prototype.bind.\n"
+ },
+ {
+  "name": "both",
+  "description": "A function which calls the two provided functions and returns the &&\nof the results.\nIt returns the result of the first function if it is false-y and the result\nof the second function otherwise. Note that this is short-circuited,\nmeaning that the second function will not be invoked if the first returns a\nfalse-y value.\nIn addition to functions, R.both also accepts any fantasy-land compatible\napplicative functor.\n"
+ },
+ {
+  "name": "call",
+  "description": "Returns the result of calling its first argument with the remaining\narguments. This is occasionally useful as a converging function for\nR.converge: the first branch can produce a function while the\nremaining branches produce values to be passed to that function as its\narguments.\n"
+ },
+ {
+  "name": "chain",
+  "description": "chain maps a function over a list and concatenates the results. chain\nis also known as flatMap in some libraries\nDispatches to the chain method of the second argument, if present,\naccording to the FantasyLand Chain spec.\n"
+ },
+ {
+  "name": "clamp",
+  "description": "Restricts a number to be within a range.\nAlso works for other ordered types such as Strings and Dates.\n"
+ },
+ {
+  "name": "clone",
+  "description": "Creates a deep copy of the value which may contain (nested) Arrays and\nObjects, Numbers, Strings, Booleans and Dates. Functions are\nassigned by reference rather than copied\nDispatches to a clone method if present.\n"
+ },
+ {
+  "name": "comparator",
+  "description": "Makes a comparator function out of a function that reports whether the first\nelement is less than the second.\n"
+ },
+ {
+  "name": "complement",
+  "description": "Takes a function f and returns a function g such that if called with the same arguments\nwhen f returns a \"truthy\" value, g returns false and when f returns a \"falsy\" value g returns true.\nR.complement may be applied to any functor\n"
+ },
+ {
+  "name": "compose",
+  "description": "Performs right-to-left function composition. The rightmost function may have\nany arity; the remaining functions must be unary.\nNote: The result of compose is not automatically curried.\n"
+ },
+ {
+  "name": "compose_k",
+  "description": "Returns the right-to-left Kleisli composition of the provided functions,\neach of which must return a value of a type supported by chain.\nR.composeK(h, g, f) is equivalent to R.compose(R.chain(h), R.chain(g), f).\n"
+ },
+ {
+  "name": "compose_p",
+  "description": "Performs right-to-left composition of one or more Promise-returning\nfunctions. The rightmost function may have any arity; the remaining\nfunctions must be unary.\n"
+ },
+ {
+  "name": "concat",
+  "description": "Returns the result of concatenating the given lists or strings.\nNote: R.concat expects both arguments to be of the same type,\nunlike the native Array.prototype.concat method. It will throw\nan error if you concat an Array with a non-Array value.\nDispatches to the concat method of the first argument, if present.\nCan also concatenate two members of a fantasy-land\ncompatible semigroup.\n"
+ },
+ {
+  "name": "cond",
+  "description": "Returns a function, fn, which encapsulates if/else, if/else, ... logic.\nR.cond takes a list of [predicate, transformer] pairs. All of the arguments\nto fn are applied to each of the predicates in turn until one returns a\n\"truthy\" value, at which point fn returns the result of applying its\narguments to the corresponding transformer. If none of the predicates\nmatches, fn returns undefined.\n"
+ },
+ {
+  "name": "construct",
+  "description": "Wraps a constructor function inside a curried function that can be called\nwith the same arguments and returns the same type.\n"
+ },
+ {
+  "name": "construct_n",
+  "description": "Wraps a constructor function inside a curried function that can be called\nwith the same arguments and returns the same type. The arity of the function\nreturned is specified to allow using variadic constructor functions.\n"
+ },
+ {
+  "name": "contains",
+  "description": "Returns true if the specified value is equal, in R.equals\nterms, to at least one element of the given list; false otherwise.\n"
+ },
+ {
+  "name": "converge",
+  "description": "Accepts a converging function and a list of branching functions and returns\na new function. When invoked, this new function is applied to some\narguments, each branching function is applied to those same arguments. The\nresults of each branching function are passed as arguments to the converging\nfunction to produce the return value.\n"
+ },
+ {
+  "name": "count_by",
+  "description": "Counts the elements of a list according to how many match each value of a\nkey generated by the supplied function. Returns an object mapping the keys\nproduced by fn to the number of occurrences in the list. Note that all\nkeys are coerced to strings because of how JavaScript objects work.\nActs as a transducer if a transformer is given in list position.\n"
+ },
+ {
+  "name": "curry",
+  "description": "Returns a curried equivalent of the provided function. The curried function\nhas two unusual capabilities. First, its arguments needn't be provided one\nat a time. If f is a ternary function and g is R.curry(f), the\nfollowing are equivalent:\ng(1)(2)(3)\ng(1)(2, 3)\ng(1, 2)(3)\ng(1, 2, 3)\nSecondly, the special placeholder value R.__ may be used to specify\n\"gaps\", allowing partial application of any combination of arguments,\nregardless of their positions. If g is as above and _ is R.__,\nthe following are equivalent:\ng(1, 2, 3)\ng(_, 2, 3)(1)\ng(_, _, 3)(1)(2)\ng(_, _, 3)(1, 2)\ng(_, 2)(1)(3)\ng(_, 2)(1, 3)\ng(_, 2)(_, 3)(1)\n"
+ },
+ {
+  "name": "curry_n",
+  "description": "Returns a curried equivalent of the provided function, with the specified\narity. The curried function has two unusual capabilities. First, its\narguments needn't be provided one at a time. If g is R.curryN(3, f), the\nfollowing are equivalent:\ng(1)(2)(3)\ng(1)(2, 3)\ng(1, 2)(3)\ng(1, 2, 3)\nSecondly, the special placeholder value R.__ may be used to specify\n\"gaps\", allowing partial application of any combination of arguments,\nregardless of their positions. If g is as above and _ is R.__,\nthe following are equivalent:\ng(1, 2, 3)\ng(_, 2, 3)(1)\ng(_, _, 3)(1)(2)\ng(_, _, 3)(1, 2)\ng(_, 2)(1)(3)\ng(_, 2)(1, 3)\ng(_, 2)(_, 3)(1)\n"
+ },
+ {
+  "name": "dec",
+  "description": "Decrements its argument.\n"
+ },
+ {
+  "name": "default_to",
+  "description": "Returns the second argument if it is not null, undefined or NaN;\notherwise the first argument is returned.\n"
+ },
+ {
+  "name": "descend",
+  "description": "Makes a descending comparator function out of a function that returns a value\nthat can be compared with < and >.\n"
+ },
+ {
+  "name": "difference",
+  "description": "Finds the set (i.e. no duplicates) of all elements in the first list not\ncontained in the second list. Objects and Arrays are compared in terms of\nvalue equality, not reference equality.\n"
+ },
+ {
+  "name": "difference_with",
+  "description": "Finds the set (i.e. no duplicates) of all elements in the first list not\ncontained in the second list. Duplication is determined according to the\nvalue returned by applying the supplied predicate to two list elements.\n"
+ },
+ {
+  "name": "dissoc",
+  "description": "Returns a new object that does not contain a prop property.\n"
+ },
+ {
+  "name": "dissoc_path",
+  "description": "Makes a shallow clone of an object, omitting the property at the given path.\nNote that this copies and flattens prototype properties onto the new object\nas well. All non-primitive properties are copied by reference.\n"
+ },
+ {
+  "name": "divide",
+  "description": "Divides two numbers. Equivalent to a / b.\n"
+ },
+ {
+  "name": "drop",
+  "description": "Returns all but the first n elements of the given list, string, or\ntransducer/transformer (or object with a drop method).\nDispatches to the drop method of the second argument, if present.\n"
+ },
+ {
+  "name": "drop_last",
+  "description": "Returns a list containing all but the last n elements of the given list.\n"
+ },
+ {
+  "name": "drop_last_while",
+  "description": "Returns a new list excluding all the tailing elements of a given list which\nsatisfy the supplied predicate function. It passes each value from the right\nto the supplied predicate function, skipping elements until the predicate\nfunction returns a falsy value. The predicate function is applied to one argument:\n(value).\n"
+ },
+ {
+  "name": "drop_repeats",
+  "description": "Returns a new list without any consecutively repeating elements.\nR.equals is used to determine equality.\nActs as a transducer if a transformer is given in list position.\n"
+ },
+ {
+  "name": "drop_repeats_with",
+  "description": "Returns a new list without any consecutively repeating elements. Equality is\ndetermined by applying the supplied predicate to each pair of consecutive elements. The\nfirst element in a series of equal elements will be preserved.\nActs as a transducer if a transformer is given in list position.\n"
+ },
+ {
+  "name": "drop_while",
+  "description": "Returns a new list excluding the leading elements of a given list which\nsatisfy the supplied predicate function. It passes each value to the supplied\npredicate function, skipping elements while the predicate function returns\ntrue. The predicate function is applied to one argument: (value).\nDispatches to the dropWhile method of the second argument, if present.\nActs as a transducer if a transformer is given in list position.\n"
+ },
+ {
+  "name": "either",
+  "description": "A function wrapping calls to the two functions in an || operation,\nreturning the result of the first function if it is truth-y and the result\nof the second function otherwise. Note that this is short-circuited,\nmeaning that the second function will not be invoked if the first returns a\ntruth-y value.\nIn addition to functions, R.either also accepts any fantasy-land compatible\napplicative functor.\n"
+ },
+ {
+  "name": "empty",
+  "description": "Returns the empty value of its argument's type. Ramda defines the empty\nvalue of Array ([]), Object ({}), String (''), and Arguments. Other\ntypes are supported if they define <Type>.empty,\n<Type>.prototype.empty or implement the\nFantasyLand Monoid spec.\nDispatches to the empty method of the first argument, if present.\n"
+ },
+ {
+  "name": "ends_with",
+  "description": "Checks if a list ends with the provided values\n"
+ },
+ {
+  "name": "eq_by",
+  "description": "Takes a function and two values in its domain and returns true if the\nvalues map to the same value in the codomain; false otherwise.\n"
+ },
+ {
+  "name": "eq_props",
+  "description": "Reports whether two objects have the same value, in R.equals\nterms, for the specified property. Useful as a curried predicate.\n"
+ },
+ {
+  "name": "equals",
+  "description": "Returns true if its arguments are equivalent, false otherwise. Handles\ncyclical data structures.\nDispatches symmetrically to the equals methods of both arguments, if\npresent.\n"
+ },
+ {
+  "name": "evolve",
+  "description": "Creates a new object by recursively evolving a shallow copy of object,\naccording to the transformation functions. All non-primitive properties\nare copied by reference.\nA transformation function will not be invoked if its corresponding key\ndoes not exist in the evolved object.\n"
+ },
+ {
+  "name": "_f",
+  "description": "A function that always returns false. Any passed in parameters are ignored.\n"
+ },
+ {
+  "name": "filter",
+  "description": "Takes a predicate and a Filterable, and returns a new filterable of the\nsame type containing the members of the given filterable which satisfy the\ngiven predicate. Filterable objects include plain objects or any object\nthat has a filter method such as Array.\nDispatches to the filter method of the second argument, if present.\nActs as a transducer if a transformer is given in list position.\n"
+ },
+ {
+  "name": "find",
+  "description": "Returns the first element of the list which matches the predicate, or\nundefined if no element matches.\nDispatches to the find method of the second argument, if present.\nActs as a transducer if a transformer is given in list position.\n"
+ },
+ {
+  "name": "find_index",
+  "description": "Returns the index of the first element of the list which matches the\npredicate, or -1 if no element matches.\nActs as a transducer if a transformer is given in list position.\n"
+ },
+ {
+  "name": "find_last",
+  "description": "Returns the last element of the list which matches the predicate, or\nundefined if no element matches.\nActs as a transducer if a transformer is given in list position.\n"
+ },
+ {
+  "name": "find_last_index",
+  "description": "Returns the index of the last element of the list which matches the\npredicate, or -1 if no element matches.\nActs as a transducer if a transformer is given in list position.\n"
+ },
+ {
+  "name": "flatten",
+  "description": "Returns a new list by pulling every item out of it (and all its sub-arrays)\nand putting them in a new array, depth-first.\n"
+ },
+ {
+  "name": "flip",
+  "description": "Returns a new function much like the supplied one, except that the first two\narguments' order is reversed.\n"
+ },
+ {
+  "name": "for_each",
+  "description": "Iterate over an input list, calling a provided function fn for each\nelement in the list.\nfn receives one argument: (value).\nNote: R.forEach does not skip deleted or unassigned indices (sparse\narrays), unlike the native Array.prototype.forEach method. For more\ndetails on this behavior, see:\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#Description\nAlso note that, unlike Array.prototype.forEach, Ramda's forEach returns\nthe original array. In some libraries this function is named each.\nDispatches to the forEach method of the second argument, if present.\n"
+ },
+ {
+  "name": "for_each_obj_indexed",
+  "description": "Iterate over an input object, calling a provided function fn for each\nkey and value in the object.\nfn receives three argument: (value, key, obj).\n"
+ },
+ {
+  "name": "from_pairs",
+  "description": "Creates a new object from a list key-value pairs. If a key appears in\nmultiple pairs, the rightmost pair is included in the object.\n"
+ },
+ {
+  "name": "group_by",
+  "description": "Splits a list into sub-lists stored in an object, based on the result of\ncalling a String-returning function on each element, and grouping the\nresults according to values returned.\nDispatches to the groupBy method of the second argument, if present.\nActs as a transducer if a transformer is given in list position.\n"
+ },
+ {
+  "name": "group_with",
+  "description": "Takes a list and returns a list of lists where each sublist's elements are\nall satisfied pairwise comparison according to the provided function.\nOnly adjacent elements are passed to the comparison function.\n"
+ },
+ {
+  "name": "gt",
+  "description": "Returns true if the first argument is greater than the second; false\notherwise.\n"
+ },
+ {
+  "name": "gte",
+  "description": "Returns true if the first argument is greater than or equal to the second;\nfalse otherwise.\n"
+ },
+ {
+  "name": "has",
+  "description": "Returns whether or not an object has an own property with the specified name\n"
+ },
+ {
+  "name": "has_in",
+  "description": "Returns whether or not an object or its prototype chain has a property with\nthe specified name\n"
+ },
+ {
+  "name": "head",
+  "description": "Returns the first element of the given list or string. In some libraries\nthis function is named first.\n"
+ },
+ {
+  "name": "identical",
+  "description": "Returns true if its arguments are identical, false otherwise. Values are\nidentical if they reference the same memory. NaN is identical to NaN;\n0 and -0 are not identical.\n"
+ },
+ {
+  "name": "identity",
+  "description": "A function that does nothing but return the parameter supplied to it. Good\nas a default or placeholder function.\n"
+ },
+ {
+  "name": "if_else",
+  "description": "Creates a function that will process either the onTrue or the onFalse\nfunction depending upon the result of the condition predicate.\n"
+ },
+ {
+  "name": "inc",
+  "description": "Increments its argument.\n"
+ },
+ {
+  "name": "index_by",
+  "description": "Given a function that generates a key, turns a list of objects into an\nobject indexing the objects by the given key. Note that if multiple\nobjects generate the same value for the indexing key only the last value\nwill be included in the generated object.\nActs as a transducer if a transformer is given in list position.\n"
+ },
+ {
+  "name": "index_of",
+  "description": "Returns the position of the first occurrence of an item in an array, or -1\nif the item is not included in the array. R.equals is used to\ndetermine equality.\n"
+ },
+ {
+  "name": "init",
+  "description": "Returns all but the last element of the given list or string.\n"
+ },
+ {
+  "name": "inner_join",
+  "description": "Takes a predicate pred, a list xs, and a list ys, and returns a list\nxs' comprising each of the elements of xs which is equal to one or more\nelements of ys according to pred.\npred must be a binary function expecting an element from each list.\nxs, ys, and xs' are treated as sets, semantically, so ordering should\nnot be significant, but since xs' is ordered the implementation guarantees\nthat its values are in the same order as they appear in xs. Duplicates are\nnot removed, so xs' may contain duplicates if xs contains duplicates.\n"
+ },
+ {
+  "name": "insert",
+  "description": "Inserts the supplied element into the list, at the specified index. Note that\nthis is not destructive: it returns a copy of the list with the changes.\nNo lists have been harmed in the application of this function.\n"
+ },
+ {
+  "name": "insert_all",
+  "description": "Inserts the sub-list into the list, at the specified index. Note that this is not\ndestructive: it returns a copy of the list with the changes.\nNo lists have been harmed in the application of this function.\n"
+ },
+ {
+  "name": "intersection",
+  "description": "Combines two lists into a set (i.e. no duplicates) composed of those\nelements common to both lists.\n"
+ },
+ {
+  "name": "intersperse",
+  "description": "Creates a new list with the separator interposed between elements.\nDispatches to the intersperse method of the second argument, if present.\n"
+ },
+ {
+  "name": "into",
+  "description": "Transforms the items of the list with the transducer and appends the\ntransformed items to the accumulator using an appropriate iterator function\nbased on the accumulator type.\nThe accumulator can be an array, string, object or a transformer. Iterated\nitems will be appended to arrays and concatenated to strings. Objects will\nbe merged directly or 2-item arrays will be merged as key, value pairs.\nThe accumulator can also be a transformer object that provides a 2-arity\nreducing iterator function, step, 0-arity initial value function, init, and\n1-arity result extraction function result. The step function is used as the\niterator function in reduce. The result function is used to convert the\nfinal accumulator into the return type and in most cases is R.identity. The\ninit function is used to provide the initial accumulator.\nThe iteration is performed with R.reduce after initializing the\ntransducer.\n"
+ },
+ {
+  "name": "invert",
+  "description": "Same as R.invertObj, however this accounts for objects with\nduplicate values by putting the values into an array.\n"
+ },
+ {
+  "name": "invert_obj",
+  "description": "Returns a new object with the keys of the given object as values, and the\nvalues of the given object, which are coerced to strings, as keys. Note\nthat the last key found is preferred when handling the same value.\n"
+ },
+ {
+  "name": "invoker",
+  "description": "Turns a named method with a specified arity into a function that can be\ncalled directly supplied with arguments and a target object.\nThe returned function is curried and accepts arity + 1 parameters where\nthe final parameter is the target object.\n"
+ },
+ {
+  "name": "is",
+  "description": "See if an object (val) is an instance of the supplied constructor. This\nfunction will check up the inheritance chain, if any.\n"
+ },
+ {
+  "name": "is_empty",
+  "description": "Returns true if the given value is its type's empty value; false\notherwise.\n"
+ },
+ {
+  "name": "is_nil",
+  "description": "Checks if the input value is null or undefined.\n"
+ },
+ {
+  "name": "join",
+  "description": "Returns a string made by inserting the separator between each element and\nconcatenating all the elements into a single string.\n"
+ },
+ {
+  "name": "juxt",
+  "description": "juxt applies a list of functions to a list of values.\n"
+ },
+ {
+  "name": "keys_in",
+  "description": "Returns a list containing the names of all the properties of the supplied\nobject, including prototype properties.\nNote that the order of the output array is not guaranteed to be consistent\nacross different JS platforms.\n"
+ },
+ {
+  "name": "last",
+  "description": "Returns the last element of the given list or string.\n"
+ },
+ {
+  "name": "last_index_of",
+  "description": "Returns the position of the last occurrence of an item in an array, or -1 if\nthe item is not included in the array. R.equals is used to\ndetermine equality.\n"
+ },
+ {
+  "name": "length",
+  "description": "Returns the number of elements in the array by returning list.length.\n"
+ },
+ {
+  "name": "lens",
+  "description": "Returns a lens for the given getter and setter functions. The getter \"gets\"\nthe value of the focus; the setter \"sets\" the value of the focus. The setter\nshould not mutate the data structure.\n"
+ },
+ {
+  "name": "lens_index",
+  "description": "Returns a lens whose focus is the specified index.\n"
+ },
+ {
+  "name": "lens_path",
+  "description": "Returns a lens whose focus is the specified path.\n"
+ },
+ {
+  "name": "lens_prop",
+  "description": "Returns a lens whose focus is the specified property.\n"
+ },
+ {
+  "name": "lift",
+  "description": "\"lifts\" a function of arity > 1 so that it may \"map over\" a list, Function or other\nobject that satisfies the FantasyLand Apply spec.\n"
+ },
+ {
+  "name": "lift_n",
+  "description": "\"lifts\" a function to be the specified arity, so that it may \"map over\" that\nmany lists, Functions or other objects that satisfy the FantasyLand Apply spec.\n"
+ },
+ {
+  "name": "lt",
+  "description": "Returns true if the first argument is less than the second; false\notherwise.\n"
+ },
+ {
+  "name": "lte",
+  "description": "Returns true if the first argument is less than or equal to the second;\nfalse otherwise.\n"
+ },
+ {
+  "name": "map",
+  "description": "Takes a function and\na functor,\napplies the function to each of the functor's values, and returns\na functor of the same shape.\nRamda provides suitable map implementations for Array and Object,\nso this function may be applied to [1, 2, 3] or {x: 1, y: 2, z: 3}.\nDispatches to the map method of the second argument, if present.\nActs as a transducer if a transformer is given in list position.\nAlso treats functions as functors and will compose them together.\n"
+ },
+ {
+  "name": "map_accum",
+  "description": "The mapAccum function behaves like a combination of map and reduce; it\napplies a function to each element of a list, passing an accumulating\nparameter from left to right, and returning a final value of this\naccumulator together with the new list.\nThe iterator function receives two arguments, acc and value, and should\nreturn a tuple [acc, value].\n"
+ },
+ {
+  "name": "map_accum_right",
+  "description": "The mapAccumRight function behaves like a combination of map and reduce; it\napplies a function to each element of a list, passing an accumulating\nparameter from right to left, and returning a final value of this\naccumulator together with the new list.\nSimilar to mapAccum, except moves through the input list from\nthe right to the left.\nThe iterator function receives two arguments, value and acc, and should\nreturn a tuple [value, acc].\n"
+ },
+ {
+  "name": "map_obj_indexed",
+  "description": "An Object-specific version of map. The function is applied to three\narguments: (value, key, obj). If only the value is significant, use\nmap instead.\n"
+ },
+ {
+  "name": "match",
+  "description": "Tests a regular expression against a String. Note that this function will\nreturn an empty array when there are no matches. This differs from\nString.prototype.match\nwhich returns null when there are no matches.\n"
+ },
+ {
+  "name": "math_mod",
+  "description": "mathMod behaves like the modulo operator should mathematically, unlike the\n% operator (and by extension, R.modulo). So while\n-17 % 5 is -2, mathMod(-17, 5) is 3. mathMod requires Integer\narguments, and returns NaN when the modulus is zero or negative.\n"
+ },
+ {
+  "name": "max",
+  "description": "Returns the larger of its two arguments.\n"
+ },
+ {
+  "name": "max_by",
+  "description": "Takes a function and two values, and returns whichever value produces the\nlarger result when passed to the provided function.\n"
+ },
+ {
+  "name": "mean",
+  "description": "Returns the mean of the given list of numbers.\n"
+ },
+ {
+  "name": "median",
+  "description": "Returns the median of the given list of numbers.\n"
+ },
+ {
+  "name": "memoize",
+  "description": "Creates a new function that, when invoked, caches the result of calling fn\nfor a given argument set and returns the result. Subsequent calls to the\nmemoized fn with the same argument set will not result in an additional\ncall to fn; instead, the cached result for that set of arguments will be\nreturned.\n"
+ },
+ {
+  "name": "memoize_with",
+  "description": "A customisable version of R.memoize. memoizeWith takes an\nadditional function that will be applied to a given argument set and used to\ncreate the cache key under which the results of the function to be memoized\nwill be stored. Care must be taken when implementing key generation to avoid\nclashes that may overwrite previous entries erroneously.\n"
+ },
+ {
+  "name": "merge",
+  "description": "Create a new object with the own properties of the first object merged with\nthe own properties of the second object. If a key exists in both objects,\nthe value from the second object will be used.\n"
+ },
+ {
+  "name": "merge_all",
+  "description": "Merges a list of objects together into one object.\n"
+ },
+ {
+  "name": "merge_deep_left",
+  "description": "Creates a new object with the own properties of the first object merged with\nthe own properties of the second object. If a key exists in both objects:\nand both values are objects, the two values will be recursively merged\notherwise the value from the first object will be used.\n"
+ },
+ {
+  "name": "merge_deep_right",
+  "description": "Creates a new object with the own properties of the first object merged with\nthe own properties of the second object. If a key exists in both objects:\nand both values are objects, the two values will be recursively merged\notherwise the value from the second object will be used.\n"
+ },
+ {
+  "name": "merge_deep_with",
+  "description": "Creates a new object with the own properties of the two provided objects.\nIf a key exists in both objects:\nand both associated values are also objects then the values will be\nrecursively merged.\notherwise the provided function is applied to associated values using the\nresulting value as the new value associated with the key.\nIf a key only exists in one object, the value will be associated with the key\nof the resulting object.\n"
+ },
+ {
+  "name": "merge_deep_with_key",
+  "description": "Creates a new object with the own properties of the two provided objects.\nIf a key exists in both objects:\nand both associated values are also objects then the values will be\nrecursively merged.\notherwise the provided function is applied to the key and associated values\nusing the resulting value as the new value associated with the key.\nIf a key only exists in one object, the value will be associated with the key\nof the resulting object.\n"
+ },
+ {
+  "name": "merge_with",
+  "description": "Creates a new object with the own properties of the two provided objects. If\na key exists in both objects, the provided function is applied to the values\nassociated with the key in each object, with the result being used as the\nvalue associated with the key in the returned object.\n"
+ },
+ {
+  "name": "merge_with_key",
+  "description": "Creates a new object with the own properties of the two provided objects. If\na key exists in both objects, the provided function is applied to the key\nand the values associated with the key in each object, with the result being\nused as the value associated with the key in the returned object.\n"
+ },
+ {
+  "name": "min",
+  "description": "Returns the smaller of its two arguments.\n"
+ },
+ {
+  "name": "min_by",
+  "description": "Takes a function and two values, and returns whichever value produces the\nsmaller result when passed to the provided function.\n"
+ },
+ {
+  "name": "module.exports",
+  "description": "A special placeholder value used to specify \"gaps\" within curried functions,\nallowing partial application of any combination of arguments, regardless of\ntheir positions.\nIf g is a curried ternary function and _ is R.__, the following are\nequivalent:\ng(1, 2, 3)\ng(_, 2, 3)(1)\ng(_, _, 3)(1)(2)\ng(_, _, 3)(1, 2)\ng(_, 2, _)(1, 3)\ng(_, 2)(1)(3)\ng(_, 2)(1, 3)\ng(_, 2)(_, 3)(1)\n"
+ },
+ {
+  "name": "modulo",
+  "description": "Divides the first parameter by the second and returns the remainder. Note\nthat this function preserves the JavaScript-style behavior for modulo. For\nmathematical modulo see mathMod.\n"
+ },
+ {
+  "name": "multiply",
+  "description": "Multiplies two numbers. Equivalent to a * b but curried.\n"
+ },
+ {
+  "name": "n_ary",
+  "description": "Wraps a function of any arity (including nullary) in a function that accepts\nexactly n parameters. Any extraneous parameters will not be passed to the\nsupplied function.\n"
+ },
+ {
+  "name": "negate",
+  "description": "Negates its argument.\n"
+ },
+ {
+  "name": "none",
+  "description": "Returns true if no elements of the list match the predicate, false\notherwise.\nDispatches to the any method of the second argument, if present.\n"
+ },
+ {
+  "name": "not",
+  "description": "A function that returns the ! of its argument. It will return true when\npassed false-y value, and false when passed a truth-y one.\n"
+ },
+ {
+  "name": "nth",
+  "description": "Returns the nth element of the given list or string. If n is negative the\nelement at index length + n is returned.\n"
+ },
+ {
+  "name": "nth_arg",
+  "description": "Returns a function which returns its nth argument.\n"
+ },
+ {
+  "name": "o",
+  "description": "o is a curried composition function that returns a unary function.\nLike compose, o performs right-to-left function composition.\nUnlike compose, the rightmost function passed to o will be\ninvoked with only one argument.\n"
+ },
+ {
+  "name": "obj_of",
+  "description": "Creates an object containing a single key:value pair.\n"
+ },
+ {
+  "name": "of",
+  "description": "Returns a singleton array containing the value provided.\nNote this of is different from the ES6 of; See\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/of\n"
+ },
+ {
+  "name": "omit",
+  "description": "Returns a partial copy of an object omitting the keys specified.\n"
+ },
+ {
+  "name": "once",
+  "description": "Accepts a function fn and returns a function that guards invocation of\nfn such that fn can only ever be called once, no matter how many times\nthe returned function is invoked. The first value calculated is returned in\nsubsequent invocations.\n"
+ },
+ {
+  "name": "or",
+  "description": "Returns true if one or both of its arguments are true. Returns false\nif both arguments are false.\n"
+ },
+ {
+  "name": "over",
+  "description": "Returns the result of \"setting\" the portion of the given data structure\nfocused by the given lens to the result of applying the given function to\nthe focused value.\n"
+ },
+ {
+  "name": "pair",
+  "description": "Takes two arguments, fst and snd, and returns [fst, snd].\n"
+ },
+ {
+  "name": "partial",
+  "description": "Takes a function f and a list of arguments, and returns a function g.\nWhen applied, g returns the result of applying f to the arguments\nprovided initially followed by the arguments provided to g.\n"
+ },
+ {
+  "name": "partial_right",
+  "description": "Takes a function f and a list of arguments, and returns a function g.\nWhen applied, g returns the result of applying f to the arguments\nprovided to g followed by the arguments provided initially.\n"
+ },
+ {
+  "name": "partition",
+  "description": "Takes a predicate and a list or other Filterable object and returns the\npair of filterable objects of the same type of elements which do and do not\nsatisfy, the predicate, respectively. Filterable objects include plain objects or any object\nthat has a filter method such as Array.\n"
+ },
+ {
+  "name": "path",
+  "description": "Retrieve the value at a given path.\n"
+ },
+ {
+  "name": "path_eq",
+  "description": "Determines whether a nested path on an object has a specific value, in\nR.equals terms. Most likely used to filter a list.\n"
+ },
+ {
+  "name": "path_or",
+  "description": "If the given, non-null object has a value at the given path, returns the\nvalue at that path. Otherwise returns the provided default value.\n"
+ },
+ {
+  "name": "path_satisfies",
+  "description": "Returns true if the specified object property at given path satisfies the\ngiven predicate; false otherwise.\n"
+ },
+ {
+  "name": "pick",
+  "description": "Returns a partial copy of an object containing only the keys specified. If\nthe key does not exist, the property is ignored.\n"
+ },
+ {
+  "name": "pick_all",
+  "description": "Similar to pick except that this one includes a key: undefined pair for\nproperties that don't exist.\n"
+ },
+ {
+  "name": "pick_by",
+  "description": "Returns a partial copy of an object containing only the keys that satisfy\nthe supplied predicate.\n"
+ },
+ {
+  "name": "pipe",
+  "description": "Performs left-to-right function composition. The leftmost function may have\nany arity; the remaining functions must be unary.\nIn some libraries this function is named sequence.\nNote: The result of pipe is not automatically curried.\n"
+ },
+ {
+  "name": "pipe_k",
+  "description": "Returns the left-to-right Kleisli composition of the provided functions,\neach of which must return a value of a type supported by chain.\nR.pipeK(f, g, h) is equivalent to R.pipe(f, R.chain(g), R.chain(h)).\n"
+ },
+ {
+  "name": "pipe_p",
+  "description": "Performs left-to-right composition of one or more Promise-returning\nfunctions. The leftmost function may have any arity; the remaining functions\nmust be unary.\n"
+ },
+ {
+  "name": "pluck",
+  "description": "Returns a new list by plucking the same named property off all objects in\nthe list supplied.\npluck will work on\nany functor in\naddition to arrays, as it is equivalent to R.map(R.prop(k), f).\n"
+ },
+ {
+  "name": "prepend",
+  "description": "Returns a new list with the given element at the front, followed by the\ncontents of the list.\n"
+ },
+ {
+  "name": "product",
+  "description": "Multiplies together all the elements of a list.\n"
+ },
+ {
+  "name": "project",
+  "description": "Reasonable analog to SQL select statement.\n"
+ },
+ {
+  "name": "prop",
+  "description": "Returns a function that when supplied an object returns the indicated\nproperty of that object, if it exists.\n"
+ },
+ {
+  "name": "prop_eq",
+  "description": "Returns true if the specified object property is equal, in\nR.equals terms, to the given value; false otherwise.\nYou can test multiple properties with R.where.\n"
+ },
+ {
+  "name": "prop_is",
+  "description": "Returns true if the specified object property is of the given type;\nfalse otherwise.\n"
+ },
+ {
+  "name": "prop_or",
+  "description": "If the given, non-null object has an own property with the specified name,\nreturns the value of that property. Otherwise returns the provided default\nvalue.\n"
+ },
+ {
+  "name": "props",
+  "description": "Acts as multiple prop: array of keys in, array of values out. Preserves\norder.\n"
+ },
+ {
+  "name": "prop_satisfies",
+  "description": "Returns true if the specified object property satisfies the given\npredicate; false otherwise. You can test multiple properties with\nR.where.\n"
+ },
+ {
+  "name": "range",
+  "description": "Returns a list of numbers from from (inclusive) to to (exclusive).\n"
+ },
+ {
+  "name": "reduce",
+  "description": "Returns a single item by iterating through the list, successively calling\nthe iterator function and passing it an accumulator value and the current\nvalue from the array, and then passing the result to the next call.\nThe iterator function receives two values: (acc, value). It may use\nR.reduced to shortcut the iteration.\nThe arguments' order of reduceRight's iterator function\nis (value, acc).\nNote: R.reduce does not skip deleted or unassigned indices (sparse\narrays), unlike the native Array.prototype.reduce method. For more details\non this behavior, see:\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#Description\nDispatches to the reduce method of the third argument, if present. When\ndoing so, it is up to the user to handle the R.reduced\nshortcuting, as this is not implemented by reduce.\n"
+ },
+ {
+  "name": "reduce_by",
+  "description": "Groups the elements of the list according to the result of calling\nthe String-returning function keyFn on each element and reduces the elements\nof each group to a single value via the reducer function valueFn.\nThis function is basically a more general groupBy function.\nActs as a transducer if a transformer is given in list position.\n"
+ },
+ {
+  "name": "reduced",
+  "description": "Returns a value wrapped to indicate that it is the final value of the reduce\nand transduce functions. The returned value should be considered a black\nbox: the internal structure is not guaranteed to be stable.\nNote: this optimization is unavailable to functions not explicitly listed\nabove. For instance, it is not currently supported by\nreduceRight.\n"
+ },
+ {
+  "name": "reduce_right",
+  "description": "Returns a single item by iterating through the list, successively calling\nthe iterator function and passing it an accumulator value and the current\nvalue from the array, and then passing the result to the next call.\nSimilar to reduce, except moves through the input list from the\nright to the left.\nThe iterator function receives two values: (value, acc), while the arguments'\norder of reduce's iterator function is (acc, value).\nNote: R.reduceRight does not skip deleted or unassigned indices (sparse\narrays), unlike the native Array.prototype.reduceRight method. For more details\non this behavior, see:\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight#Description\n"
+ },
+ {
+  "name": "reduce_while",
+  "description": "Like reduce, reduceWhile returns a single item by iterating\nthrough the list, successively calling the iterator function. reduceWhile\nalso takes a predicate that is evaluated before each step. If the predicate\nreturns false, it \"short-circuits\" the iteration and returns the current\nvalue of the accumulator.\n"
+ },
+ {
+  "name": "reject",
+  "description": "The complement of filter.\nActs as a transducer if a transformer is given in list position. Filterable\nobjects include plain objects or any object that has a filter method such\nas Array.\n"
+ },
+ {
+  "name": "remove",
+  "description": "Removes the sub-list of list starting at index start and containing\ncount elements. Note that this is not destructive: it returns a copy of\nthe list with the changes.\nNo lists have been harmed in the application of this function.\n"
+ },
+ {
+  "name": "repeat",
+  "description": "Returns a fixed list of size n containing a specified identical value.\n"
+ },
+ {
+  "name": "replace",
+  "description": "Replace a substring or regex match in a string with a replacement.\n"
+ },
+ {
+  "name": "reverse",
+  "description": "Returns a new list or string with the elements or characters in reverse\norder.\n"
+ },
+ {
+  "name": "scan",
+  "description": "Scan is similar to reduce, but returns a list of successively\nreduced values from the left\n"
+ },
+ {
+  "name": "sequence",
+  "description": "Transforms a Traversable\nof Applicative into an\nApplicative of Traversable.\nDispatches to the sequence method of the second argument, if present.\n"
+ },
+ {
+  "name": "set",
+  "description": "Returns the result of \"setting\" the portion of the given data structure\nfocused by the given lens to the given value.\n"
+ },
+ {
+  "name": "slice",
+  "description": "Returns the elements of the given list or string (or object with a slice\nmethod) from fromIndex (inclusive) to toIndex (exclusive).\nDispatches to the slice method of the third argument, if present.\n"
+ },
+ {
+  "name": "sort",
+  "description": "Returns a copy of the list, sorted according to the comparator function,\nwhich should accept two values at a time and return a negative number if the\nfirst value is smaller, a positive number if it's larger, and zero if they\nare equal. Please note that this is a copy of the list. It does not\nmodify the original.\n"
+ },
+ {
+  "name": "sort_by",
+  "description": "Sorts the list according to the supplied function.\n"
+ },
+ {
+  "name": "sort_with",
+  "description": "Sorts a list according to a list of comparators.\n"
+ },
+ {
+  "name": "split",
+  "description": "Splits a string into an array of strings based on the given\nseparator.\n"
+ },
+ {
+  "name": "split_at",
+  "description": "Splits a given list or string at a given index.\n"
+ },
+ {
+  "name": "split_every",
+  "description": "Splits a collection into slices of the specified length.\n"
+ },
+ {
+  "name": "split_when",
+  "description": "Takes a list and a predicate and returns a pair of lists with the following properties:\nthe result of concatenating the two output lists is equivalent to the input list;\nnone of the elements of the first output list satisfies the predicate; and\nif the second output list is non-empty, its first element satisfies the predicate.\n"
+ },
+ {
+  "name": "starts_with",
+  "description": "Checks if a list starts with the provided values\n"
+ },
+ {
+  "name": "subtract",
+  "description": "Subtracts its second argument from its first argument.\n"
+ },
+ {
+  "name": "sum",
+  "description": "Adds together all the elements of a list.\n"
+ },
+ {
+  "name": "symmetric_difference",
+  "description": "Finds the set (i.e. no duplicates) of all elements contained in the first or\nsecond list, but not both.\n"
+ },
+ {
+  "name": "symmetric_difference_with",
+  "description": "Finds the set (i.e. no duplicates) of all elements contained in the first or\nsecond list, but not both. Duplication is determined according to the value\nreturned by applying the supplied predicate to two list elements.\n"
+ },
+ {
+  "name": "_t",
+  "description": "A function that always returns true. Any passed in parameters are ignored.\n"
+ },
+ {
+  "name": "tail",
+  "description": "Returns all but the first element of the given list or string (or object\nwith a tail method).\nDispatches to the slice method of the first argument, if present.\n"
+ },
+ {
+  "name": "take",
+  "description": "Returns the first n elements of the given list, string, or\ntransducer/transformer (or object with a take method).\nDispatches to the take method of the second argument, if present.\n"
+ },
+ {
+  "name": "take_last",
+  "description": "Returns a new list containing the last n elements of the given list.\nIf n > list.length, returns a list of list.length elements.\n"
+ },
+ {
+  "name": "take_last_while",
+  "description": "Returns a new list containing the last n elements of a given list, passing\neach value to the supplied predicate function, and terminating when the\npredicate function returns false. Excludes the element that caused the\npredicate function to fail. The predicate function is passed one argument:\n(value).\n"
+ },
+ {
+  "name": "take_while",
+  "description": "Returns a new list containing the first n elements of a given list,\npassing each value to the supplied predicate function, and terminating when\nthe predicate function returns false. Excludes the element that caused the\npredicate function to fail. The predicate function is passed one argument:\n(value).\nDispatches to the takeWhile method of the second argument, if present.\nActs as a transducer if a transformer is given in list position.\n"
+ },
+ {
+  "name": "tap",
+  "description": "Runs the given function with the supplied object, then returns the object.\nActs as a transducer if a transformer is given as second parameter.\n"
+ },
+ {
+  "name": "test",
+  "description": "Determines whether a given string matches a given regular expression.\n"
+ },
+ {
+  "name": "times",
+  "description": "Calls an input function n times, returning an array containing the results\nof those function calls.\nfn is passed one argument: The current value of n, which begins at 0\nand is gradually incremented to n - 1.\n"
+ },
+ {
+  "name": "to_lower",
+  "description": "The lower case version of a string.\n"
+ },
+ {
+  "name": "to_pairs",
+  "description": "Converts an object into an array of key, value arrays. Only the object's\nown properties are used.\nNote that the order of the output array is not guaranteed to be consistent\nacross different JS platforms.\n"
+ },
+ {
+  "name": "to_pairs_in",
+  "description": "Converts an object into an array of key, value arrays. The object's own\nproperties and prototype properties are used. Note that the order of the\noutput array is not guaranteed to be consistent across different JS\nplatforms.\n"
+ },
+ {
+  "name": "to_string",
+  "description": "Returns the string representation of the given value. eval'ing the output\nshould result in a value equivalent to the input value. Many of the built-in\ntoString methods do not satisfy this requirement.\nIf the given value is an [object Object] with a toString method other\nthan Object.prototype.toString, this method is invoked with no arguments\nto produce the return value. This means user-defined constructor functions\ncan provide a suitable toString method. For example:\nfunction Point(x, y) {\nthis.x = x;\nthis.y = y;\n}\nPoint.prototype.toString = function() {\nreturn 'new Point(' + this.x + ', ' + this.y + ')';\n};\nR.toString(new Point(1, 2)); //=> 'new Point(1, 2)'\n"
+ },
+ {
+  "name": "to_upper",
+  "description": "The upper case version of a string.\n"
+ },
+ {
+  "name": "transduce",
+  "description": "Initializes a transducer using supplied iterator function. Returns a single\nitem by iterating through the list, successively calling the transformed\niterator function and passing it an accumulator value and the current value\nfrom the array, and then passing the result to the next call.\nThe iterator function receives two values: (acc, value). It will be\nwrapped as a transformer to initialize the transducer. A transformer can be\npassed directly in place of an iterator function. In both cases, iteration\nmay be stopped early with the R.reduced function.\nA transducer is a function that accepts a transformer and returns a\ntransformer and can be composed directly.\nA transformer is an an object that provides a 2-arity reducing iterator\nfunction, step, 0-arity initial value function, init, and 1-arity result\nextraction function, result. The step function is used as the iterator\nfunction in reduce. The result function is used to convert the final\naccumulator into the return type and in most cases is\nR.identity. The init function can be used to provide an\ninitial accumulator, but is ignored by transduce.\nThe iteration is performed with R.reduce after initializing the transducer.\n"
+ },
+ {
+  "name": "transpose",
+  "description": "Transposes the rows and columns of a 2D list.\nWhen passed a list of n lists of length x,\nreturns a list of x lists of length n.\n"
+ },
+ {
+  "name": "traverse",
+  "description": "Maps an Applicative-returning\nfunction over a Traversable,\nthen uses sequence to transform the resulting Traversable of Applicative\ninto an Applicative of Traversable.\nDispatches to the traverse method of the third argument, if present.\n"
+ },
+ {
+  "name": "try_catch",
+  "description": "tryCatch takes two functions, a tryer and a catcher. The returned\nfunction evaluates the tryer; if it does not throw, it simply returns the\nresult. If the tryer does throw, the returned function evaluates the\ncatcher function and returns its result. Note that for effective\ncomposition with this function, both the tryer and catcher functions\nmust return the same type of results.\n"
+ },
+ {
+  "name": "type",
+  "description": "Gives a single-word string description of the (native) type of a value,\nreturning such answers as 'Object', 'Number', 'Array', or 'Null'. Does not\nattempt to distinguish user Object types any further, reporting them all as\n'Object'.\n"
+ },
+ {
+  "name": "unapply",
+  "description": "Takes a function fn, which takes a single array argument, and returns a\nfunction which:\ntakes any number of positional arguments;\npasses these arguments to fn as an array; and\nreturns the result.\nIn other words, R.unapply derives a variadic function from a function which\ntakes an array. R.unapply is the inverse of R.apply.\n"
+ },
+ {
+  "name": "unary",
+  "description": "Wraps a function of any arity (including nullary) in a function that accepts\nexactly 1 parameter. Any extraneous parameters will not be passed to the\nsupplied function.\n"
+ },
+ {
+  "name": "uncurry_n",
+  "description": "Returns a function of arity n from a (manually) curried function.\n"
+ },
+ {
+  "name": "unfold",
+  "description": "Builds a list from a seed value. Accepts an iterator function, which returns\neither false to stop iteration or an array of length 2 containing the value\nto add to the resulting list and the seed to be used in the next call to the\niterator function.\nThe iterator function receives one argument: (seed).\n"
+ },
+ {
+  "name": "union",
+  "description": "Combines two lists into a set (i.e. no duplicates) composed of the elements\nof each list.\n"
+ },
+ {
+  "name": "union_with",
+  "description": "Combines two lists into a set (i.e. no duplicates) composed of the elements\nof each list. Duplication is determined according to the value returned by\napplying the supplied predicate to two list elements.\n"
+ },
+ {
+  "name": "uniq",
+  "description": "Returns a new list containing only one copy of each element in the original\nlist. R.equals is used to determine equality.\n"
+ },
+ {
+  "name": "uniq_by",
+  "description": "Returns a new list containing only one copy of each element in the original\nlist, based upon the value returned by applying the supplied function to\neach list element. Prefers the first item if the supplied function produces\nthe same value on two items. R.equals is used for comparison.\n"
+ },
+ {
+  "name": "uniq_with",
+  "description": "Returns a new list containing only one copy of each element in the original\nlist, based upon the value returned by applying the supplied predicate to\ntwo list elements. Prefers the first item if two items compare equal based\non the predicate.\n"
+ },
+ {
+  "name": "unless",
+  "description": "Tests the final argument by passing it to the given predicate function. If\nthe predicate is not satisfied, the function will return the result of\ncalling the whenFalseFn function with the same argument. If the predicate\nis satisfied, the argument is returned as is.\n"
+ },
+ {
+  "name": "unnest",
+  "description": "Shorthand for R.chain(R.identity), which removes one level of nesting from\nany Chain.\n"
+ },
+ {
+  "name": "until",
+  "description": "Takes a predicate, a transformation function, and an initial value,\nand returns a value of the same type as the initial value.\nIt does so by applying the transformation until the predicate is satisfied,\nat which point it returns the satisfactory value.\n"
+ },
+ {
+  "name": "update",
+  "description": "Returns a new copy of the array with the element at the provided index\nreplaced with the given value.\n"
+ },
+ {
+  "name": "use_with",
+  "description": "Accepts a function fn and a list of transformer functions and returns a\nnew curried function. When the new function is invoked, it calls the\nfunction fn with parameters consisting of the result of calling each\nsupplied handler on successive arguments to the new function.\nIf more arguments are passed to the returned function than transformer\nfunctions, those arguments are passed directly to fn as additional\nparameters. If you expect additional arguments that don't need to be\ntransformed, although you can ignore them, it's best to pass an identity\nfunction so that the new function reports the correct arity.\n"
+ },
+ {
+  "name": "values",
+  "description": "Returns a list of all the enumerable own properties of the supplied object.\nNote that the order of the output array is not guaranteed across different\nJS platforms.\n"
+ },
+ {
+  "name": "values_in",
+  "description": "Returns a list of all the properties, including prototype properties, of the\nsupplied object.\nNote that the order of the output array is not guaranteed to be consistent\nacross different JS platforms.\n"
+ },
+ {
+  "name": "view",
+  "description": "Returns a \"view\" of the given data structure, determined by the given lens.\nThe lens's focus determines which portion of the data structure is visible.\n"
+ },
+ {
+  "name": "when",
+  "description": "Tests the final argument by passing it to the given predicate function. If\nthe predicate is satisfied, the function will return the result of calling\nthe whenTrueFn function with the same argument. If the predicate is not\nsatisfied, the argument is returned as is.\n"
+ },
+ {
+  "name": "where",
+  "description": "Takes a spec object and a test object; returns true if the test satisfies\nthe spec. Each of the spec's own properties must be a predicate function.\nEach predicate is applied to the value of the corresponding property of the\ntest object. where returns true if all the predicates return true, false\notherwise.\nwhere is well suited to declaratively expressing constraints for other\nfunctions such as filter and find.\n"
+ },
+ {
+  "name": "where_eq",
+  "description": "Takes a spec object and a test object; returns true if the test satisfies\nthe spec, false otherwise. An object satisfies the spec if, for each of the\nspec's own properties, accessing that property of the object gives the same\nvalue (in R.equals terms) as accessing that property of the\nspec.\nwhereEq is a specialization of where.\n"
+ },
+ {
+  "name": "without",
+  "description": "Returns a new list without values in the first argument.\nR.equals is used to determine equality.\nActs as a transducer if a transformer is given in list position.\n"
+ },
+ {
+  "name": "xprod",
+  "description": "Creates a new list out of the two supplied by creating each possible pair\nfrom the lists.\n"
+ },
+ {
+  "name": "zip",
+  "description": "Creates a new list out of the two supplied by pairing up equally-positioned\nitems from both lists. The returned list is truncated to the length of the\nshorter of the two input lists.\nNote: zip is equivalent to zipWith(function(a, b) { return [a, b] }).\n"
+ },
+ {
+  "name": "zip_obj",
+  "description": "Creates a new object out of a list of keys and a list of values.\nKey/value pairing is truncated to the length of the shorter of the two lists.\nNote: zipObj is equivalent to pipe(zip, fromPairs).\n"
+ },
+ {
+  "name": "zip_with",
+  "description": "Creates a new list out of the two supplied by applying the function to each\nequally-positioned pair in the lists. The returned list is truncated to the\nlength of the shorter of the two input lists.\n"
+ }
+]
