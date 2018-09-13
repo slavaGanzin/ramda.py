@@ -5,12 +5,8 @@ from .filter import filter
 
 @curry
 def reject(p, xs):
-    """
-    Acts as a complement  of `filter`
-
-    :param p: predicate
-    :param xs: Iterable.
-        A sequence, a container which supports iteration or an iterator
-    :return: list
-    """
+    """The complement of filter.
+Acts as a transducer if a transformer is given in list position. Filterable
+objects include plain objects or any object that has a filter method such
+as Array"""
     return filter(complement(p), xs)

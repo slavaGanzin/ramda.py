@@ -3,6 +3,7 @@ from ramda.curry import curry
 
 @curry
 def path(keys, dict):
+    """Retrieve the value at a given path"""
     if not keys:
         raise ValueError("Expected at least one key, got {0}".format(keys))
     current_value = dict

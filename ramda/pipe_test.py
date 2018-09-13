@@ -1,5 +1,5 @@
-from .pipe import pipe
-from ramda.private.asserts import assert_equal
+from ramda import *
+from ramda.private.asserts import *
 
 
 def add10(x):
@@ -20,4 +20,4 @@ def pipe_test():
         double,
         add10
     )
-    assert_equal(piped(100), (100-2)*2+10)
+    assert_equal(piped(100), (100 - 2) * 2 + 10)

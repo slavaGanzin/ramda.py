@@ -10,4 +10,4 @@ for i in ramda/*.py; do
 done
 
 git add $init
-nosetests  -x && pycodestyle && nosetests --with-coverage
+nosetests  -x && pycodestyle --ignore E501 && nosetests --with-coverage

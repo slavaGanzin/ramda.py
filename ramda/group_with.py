@@ -3,6 +3,9 @@ from ramda.curry import curry
 
 @curry
 def group_with(predicate, xs):
+    """Takes a list and returns a list of lists where each sublist's elements are
+all satisfied pairwise comparison according to the provided function.
+Only adjacent elements are passed to the comparison function"""
     out = []
     is_str = isinstance(xs, str)
     group = [xs[0]]

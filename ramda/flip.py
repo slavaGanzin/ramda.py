@@ -8,10 +8,8 @@ from ramda.private.curry_spec import make_func_curry_spec
 
 @curry
 def flip(f):
-    """
-    Calls the function f by flipping the first two positional
-    arguments
-    """
+    """Returns a new function much like the supplied one, except that the first two
+arguments' order is reversed"""
 
     def wrapped(*args, **kwargs):
         return f(*flip_first_two(args), **kwargs)

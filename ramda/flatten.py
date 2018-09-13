@@ -7,15 +7,8 @@ from ramda.curry import curry
 
 @curry
 def flatten_until(is_leaf, xs):
-    """
-    Flatten a nested  sequence. A sequence could be a nested list of lists
-    or tuples or a combination of both
-
-    :param is_leaf: Predicate. Predicate to  determine whether an item
-                    in the iterable `xs` is a leaf node or not.
-    :param xs: Iterable. Nested lists or tuples
-    :return: list.
-    """
+    """Returns a new list by pulling every item out of it (and all its sub-arrays)
+and putting them in a new array, depth-first"""
 
     def _flatten_until(items):
         if isinstance(Iterable, items) and not is_leaf(items):

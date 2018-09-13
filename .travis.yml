@@ -6,7 +6,7 @@ install:
   - pip install coveralls
   - pip install pycodestyle
 script:
-  - pycodestyle
+  - pycodestyle --ignore E501
   - python setup.py nosetests
 after_success:
   - coveralls

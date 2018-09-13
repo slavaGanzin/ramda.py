@@ -7,11 +7,7 @@ def is_iterable(v):
 
 
 def iterables_equal(iterable1, iterable2):
-    return iterable1 == iterable2 or (
-        is_iterable(iterable1) and
-        is_iterable(iterable2) and
-        all(map(iterables_equal, iterable1, iterable2))
-    )
+    return iterable1 == iterable2 or (is_iterable(iterable1) and is_iterable(iterable2) and all(map(iterables_equal, iterable1, iterable2)))
 
 
 def assert_iterables_equal(actual_iterable, expected_iterable):

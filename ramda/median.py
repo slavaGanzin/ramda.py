@@ -3,6 +3,7 @@ from ramda.curry import curry
 
 @curry
 def median(xs):
+    """Returns the median of the given list of numbers"""
     _xs = sorted(xs)
     n = len(xs)
     i = n // 2
