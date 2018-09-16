@@ -2,4 +2,7 @@ from ramda.curry import curry
 import re
 
 
-replace = curry(re.sub)
+@curry
+def replace(pattern, replacement, string):
+    """Replace a substring or regex match in a string with a replacement"""
+    return re.sub(pattern, replacement, string)
