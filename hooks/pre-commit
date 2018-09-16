@@ -9,5 +9,7 @@ for i in ramda/*.py; do
   fi
 done
 
+echo "from .test import test" >> $init
+
 git add $init
 nosetests  -x && pycodestyle --ignore E501 && nosetests --with-coverage

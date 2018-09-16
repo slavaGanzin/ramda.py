@@ -160,3 +160,4 @@ from .without import without
 from .xprod import xprod
 from .zip_obj import zip_obj
 from .zip_with import zip_with
+from .test import test
