@@ -1,30 +1,31 @@
-#!/usr/bin/env node
+#!/usr/bin/env python3
 
-const fs = require('fs')
+import os
+import json
+from ramda import *
 
-const docs = require('../jsdocs.json')
+SOURCES = './ramda/'
 
-const SOURCES = './ramda/'
+docs = json.load(open('./jsdocs.json'))
+filter_functions = filter(both(test(r'.py$'), complement(test('test'))))
+clear_description = replace(r'\.?\n$', '')
 
-fs.readdirSync(SOURCES)
-  .filter(x => /py$/.test(x) && !/test/.test(x))
-  // .map(x => )
-  .map(file => {
-    const name = file.replace(/.py$/, '')
-    const source = fs.readFileSync(SOURCES+file, 'utf8')
+for filename in filter_functions(os.listdir(SOURCES)):
+    name = replace(r'.py$', '', filename)
+    source = open(SOURCES + filename).read()
 
-    let func = null
-    for (func of docs) {
-      if (func.name == name) break
-    }
-    if (!func)
-      return console.error(`${name} has no description`)
+    func = find(prop_eq('name', name), docs)
 
-    const docString = `\n    """${func.description.replace(/\.?\n$/,'')}"""\n`
+    if not func:
+        print(f'{name} has no description')
+        continue
 
-    const modifiedSource = (/"""/.test(source))
-      ? source.replace(/\n\s+"""(.*\n)*.*"""\n/gm, docString)
-      : source.replace(new RegExp(`(def ${name}.*:)\n`, 'gm'), `$1${docString}`)
+    doc_string = f'\n    """{clear_description(func["description"])}"""\n'
 
-      fs.writeFileSync(SOURCES+file, modifiedSource)
-  })
+    modified = if_else(
+        test('"""'),
+        replace(fr'\n\s+"""(.*\n)*.*"""\n', doc_string),
+        replace(fr'(def {name}.*:)\n', rf'\1{doc_string}'),
+        source)
+
+    open(SOURCES + filename, 'w').write(modified)
