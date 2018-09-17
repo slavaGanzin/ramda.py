@@ -145,6 +145,7 @@ from .range import range
 from .reduce import reduce
 from .reject import reject
 from .replace import replace
+from .split_every import split_every
 from .subtract import subtract
 from .sum import sum
 from .tail import tail

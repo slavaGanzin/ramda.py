@@ -13,4 +13,5 @@ echo "from .test import test" >> $init
 
 sort -u $init -o $init
 git add $init
+./hooks/docs
 nosetests  -x && pycodestyle --ignore E501 && nosetests --with-coverage
