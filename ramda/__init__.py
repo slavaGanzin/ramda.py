@@ -159,6 +159,8 @@ from .trim import trim
 from .uniq import uniq
 from .update import update
 from .values import values
+from .where import where
+from .where_eq import where_eq
 from .without import without
 from .xprod import xprod
 from .zip_obj import zip_obj
