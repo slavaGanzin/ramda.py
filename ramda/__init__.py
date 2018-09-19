@@ -140,6 +140,7 @@ from .project import project
 from .prop import prop
 from .prop_eq import prop_eq
 from .prop_or import prop_or
+from .prop_satisfies import prop_satisfies
 from .props import props
 from .range import range
 from .reduce import reduce
@@ -159,6 +160,7 @@ from .trim import trim
 from .uniq import uniq
 from .update import update
 from .values import values
+from .when import when
 from .where import where
 from .where_eq import where_eq
 from .without import without
