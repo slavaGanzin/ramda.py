@@ -10,7 +10,7 @@ docs = map(evolve(
     {'name': replace(r'^_', '')}),
     json.load(open('./jsdocs.json')))
 
-filter_functions = filter(both(test(r'.py$'), complement(test('test'))))
+filter_functions = filter(both(test(r'.py$'), complement(test('_test'))))
 clear_description = replace(r'\.?\n$', '')
 
 files = filter_functions(os.listdir(SOURCES))
@@ -37,7 +37,8 @@ for filename in files:
     open(SOURCES + filename, 'w').write(modified)
 
 
-print('not done:', join('\n', difference(
+print('\n\nnot done:')
+apply(print, juxt([join('\n'), length])(difference(
     pluck('name', docs),
     map(cutPy, files)
 )))
