@@ -38,7 +38,7 @@ for filename in files:
 
 
 print('\n\nnot done:')
-apply(print, juxt([join('\n'), length])(difference(
+converge(print, [join('\n'), length], difference(
     pluck('name', docs),
     map(cutPy, files)
-)))
+))
