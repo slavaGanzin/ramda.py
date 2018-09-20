@@ -165,5 +165,6 @@ from .where import where
 from .where_eq import where_eq
 from .without import without
 from .xprod import xprod
+from .zip import zip
 from .zip_obj import zip_obj
 from .zip_with import zip_with
