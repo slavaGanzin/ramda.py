@@ -6,12 +6,18 @@ from ramda import *
 
 SOURCES = './ramda/'
 
-docs = json.load(open('./jsdocs.json'))
+docs = map(evolve(
+    {'name': replace(r'^_', '')}),
+    json.load(open('./jsdocs.json')))
+
 filter_functions = filter(both(test(r'.py$'), complement(test('test'))))
 clear_description = replace(r'\.?\n$', '')
 
-for filename in filter_functions(os.listdir(SOURCES)):
-    name = replace(r'.py$', '', filename)
+files = filter_functions(os.listdir(SOURCES))
+cutPy = replace(r'.py$', '')
+
+for filename in files:
+    name = cutPy(filename)
     source = open(SOURCES + filename).read()
 
     func = find(prop_eq('name', name), docs)
@@ -29,3 +35,9 @@ for filename in filter_functions(os.listdir(SOURCES)):
         source)
 
     open(SOURCES + filename, 'w').write(modified)
+
+
+print('not done:', join('\n', difference(
+    pluck('name', docs),
+    map(cutPy, files)
+)))

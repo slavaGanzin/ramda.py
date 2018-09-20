@@ -2,7 +2,5 @@
 
 
 def trim(x):
-    """Creates a new list out of the two supplied by applying the function to each
-equally-positioned pair in the lists. The returned list is truncated to the
-length of the shorter of the two input lists"""
+    """Removes (strips) whitespace from both ends of the string"""
     return x.strip()

@@ -3,7 +3,8 @@ from ramda.curry import curry
 
 @curry
 def keys(dict):
-    """Creates a new list out of the two supplied by applying the function to each
-equally-positioned pair in the lists. The returned list is truncated to the
-length of the shorter of the two input lists"""
+    """Returns a list containing the names of all the enumerable own properties of
+the supplied object.
+Note that the order of the output array is not guaranteed to be consistent
+across different JS platforms"""
     return dict.keys()
