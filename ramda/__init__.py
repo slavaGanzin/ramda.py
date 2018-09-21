@@ -158,6 +158,7 @@ from .tap import tap
 from .test import test
 from .times import times
 from .to_lower import to_lower
+from .to_pairs import to_pairs
 from .to_upper import to_upper
 from .trim import trim
 from .union import union
@@ -173,4 +174,3 @@ from .xprod import xprod
 from .zip import zip
 from .zip_obj import zip_obj
 from .zip_with import zip_with
-from .zip import zip
