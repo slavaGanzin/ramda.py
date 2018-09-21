@@ -8,6 +8,6 @@ there are any that don't.
 Dispatches to the all method of the second argument, if present.
 Acts as a transducer if a transformer is given in list position"""
     for x in xs:
-        if p(x) is False:
+        if not p(x):
             return False
     return True
