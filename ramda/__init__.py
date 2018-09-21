@@ -149,6 +149,7 @@ from .replace import replace
 from .split import split
 from .split_at import split_at
 from .split_every import split_every
+from .split_when import split_when
 from .subtract import subtract
 from .sum import sum
 from .tail import tail
@@ -172,3 +173,4 @@ from .xprod import xprod
 from .zip import zip
 from .zip_obj import zip_obj
 from .zip_with import zip_with
+from .zip import zip
