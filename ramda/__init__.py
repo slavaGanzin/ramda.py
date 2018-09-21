@@ -158,6 +158,7 @@ from .to_lower import to_lower
 from .to_upper import to_upper
 from .trim import trim
 from .union import union
+from .union_with import union_with
 from .uniq import uniq
 from .update import update
 from .values import values
