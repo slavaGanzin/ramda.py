@@ -1,4 +1,4 @@
-from ramda.pick import pick
+from ramda import *
 from ramda.private.asserts import *
 
 
