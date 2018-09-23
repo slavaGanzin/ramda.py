@@ -145,6 +145,7 @@ from .props import props
 from .range import range
 from .reduce import reduce
 from .reject import reject
+from .remove import remove
 from .replace import replace
 from .reverse import reverse
 from .split import split
