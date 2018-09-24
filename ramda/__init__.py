@@ -12,6 +12,7 @@ from .ap import ap
 from .aperture import aperture
 from .append import append
 from .apply import apply
+from .apply_spec import apply_spec
 from .apply_to import apply_to
 from .assoc import assoc
 from .assoc_path import assoc_path
