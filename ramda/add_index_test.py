@@ -2,7 +2,7 @@ from ramda import *
 from ramda.private.asserts import *
 
 
-map_indexed = add_index(map)
+# map_indexed = add_index(map)
 
 
 def add_index_test():
