@@ -171,6 +171,7 @@ from .union import union
 from .union_with import union_with
 from .uniq import uniq
 from .unless import unless
+from .unnest import unnest
 from .until import until
 from .update import update
 from .values import values
