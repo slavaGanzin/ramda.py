@@ -8,7 +8,7 @@ def prop(name, o):
 property of that object, if it exists"""
     try:
         return builtins.getattr(o, name)
-    except AttributeError:
+    except (AttributeError, TypeError):
         try:
             return o[name]
         except KeyError:
