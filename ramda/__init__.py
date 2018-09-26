@@ -151,6 +151,7 @@ from .remove import remove
 from .replace import replace
 from .reverse import reverse
 from .slice import slice
+from .sort import sort
 from .split import split
 from .split_at import split_at
 from .split_every import split_every
