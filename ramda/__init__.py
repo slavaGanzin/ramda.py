@@ -149,6 +149,7 @@ from .range import range
 from .reduce import reduce
 from .reject import reject
 from .remove import remove
+from .repeat import repeat
 from .replace import replace
 from .reverse import reverse
 from .slice import slice
