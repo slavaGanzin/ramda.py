@@ -23,6 +23,7 @@ from .call import call
 from .chain import chain
 from .clamp import clamp
 from .clone import clone
+from .comparator import comparator
 from .complement import complement
 from .compose import compose
 from .concat import concat
