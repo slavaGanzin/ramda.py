@@ -14,6 +14,7 @@ from .append import append
 from .apply import apply
 from .apply_spec import apply_spec
 from .apply_to import apply_to
+from .ascend import ascend
 from .assoc import assoc
 from .assoc_path import assoc_path
 from .binary import binary
@@ -37,6 +38,7 @@ from .curry import curry
 from .curry_n import curry_n
 from .dec import dec
 from .default_to import default_to
+from .descend import descend
 from .difference import difference
 from .difference_with import difference_with
 from .dissoc import dissoc
@@ -155,6 +157,7 @@ from .reverse import reverse
 from .slice import slice
 from .sort import sort
 from .sort_by import sort_by
+from .sort_with import sort_with
 from .split import split
 from .split_at import split_at
 from .split_every import split_every
