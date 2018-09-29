@@ -154,6 +154,7 @@ from .remove import remove
 from .repeat import repeat
 from .replace import replace
 from .reverse import reverse
+from .scan import scan
 from .slice import slice
 from .sort import sort
 from .sort_by import sort_by
