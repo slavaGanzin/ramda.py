@@ -1,5 +1,5 @@
-from .take import take
-from ramda.private.asserts import assert_iterables_equal
+from ramda import *
+from ramda.private.asserts import *
 
 
 def take_nocurry_test():
