@@ -13,4 +13,4 @@ Acts as a transducer if a transformer is given in list position"""
     for i, e in enumerate(list):
         if not predicate(e):
             return list[:i]
-    return out
+    return list

@@ -168,6 +168,7 @@ from .sum import sum
 from .tail import tail
 from .take import take
 from .take_last import take_last
+from .take_last_while import take_last_while
 from .take_while import take_while
 from .tap import tap
 from .test import test
