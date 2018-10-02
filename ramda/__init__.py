@@ -102,6 +102,8 @@ from .lesser import lesser
 from .lt import lt
 from .lte import lte
 from .map import map
+from .map_accum import map_accum
+from .map_accum_right import map_accum_right
 from .map_obj_indexed import map_obj_indexed
 from .match import match
 from .max import max
