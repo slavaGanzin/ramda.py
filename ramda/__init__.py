@@ -180,6 +180,7 @@ from .to_pairs import to_pairs
 from .to_upper import to_upper
 from .trim import trim
 from .try_catch import try_catch
+from .unary import unary
 from .union import union
 from .union_with import union_with
 from .uniq import uniq
