@@ -151,6 +151,7 @@ from .prop_satisfies import prop_satisfies
 from .props import props
 from .range import range
 from .reduce import reduce
+from .reduce_while import reduce_while
 from .reject import reject
 from .remove import remove
 from .repeat import repeat
@@ -185,6 +186,7 @@ from .trim import trim
 from .try_catch import try_catch
 from .unapply import unapply
 from .unary import unary
+from .unfold import unfold
 from .union import union
 from .union_with import union_with
 from .uniq import uniq
