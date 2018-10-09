@@ -169,6 +169,7 @@ from .starts_with import starts_with
 from .subtract import subtract
 from .sum import sum
 from .symmetric_difference import symmetric_difference
+from .symmetric_difference_with import symmetric_difference_with
 from .tail import tail
 from .take import take
 from .take_last import take_last
