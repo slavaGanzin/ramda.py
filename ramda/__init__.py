@@ -190,6 +190,7 @@ from .unfold import unfold
 from .union import union
 from .union_with import union_with
 from .uniq import uniq
+from .uniq_by import uniq_by
 from .unless import unless
 from .unnest import unnest
 from .until import until
