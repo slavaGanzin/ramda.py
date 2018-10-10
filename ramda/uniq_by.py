@@ -8,4 +8,4 @@ list, based upon the value returned by applying the supplied function to
 each list element. Prefers the first item if the supplied function produces
 the same value on two items. R.equals is used for comparison"""
     used = set()
-    return [x for x in list if predicate(x) not in used and (used.add(predicate(x)) or True)]
+    return [x for x in list if predicate(x) not in used and not used.add(predicate(x))]
