@@ -195,6 +195,7 @@ from .unless import unless
 from .unnest import unnest
 from .until import until
 from .update import update
+from .use_with import use_with
 from .values import values
 from .when import when
 from .where import where
