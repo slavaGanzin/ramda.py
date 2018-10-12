@@ -115,6 +115,7 @@ from .memoize_with import memoize_with
 from .merge import merge
 from .merge_all import merge_all
 from .merge_with import merge_with
+from .merge_with_key import merge_with_key
 from .min import min
 from .min_by import min_by
 from .modulo import modulo
