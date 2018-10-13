@@ -12,7 +12,7 @@ class PasteurizeBuildCommand(build_py):
 
 setup(
     name='ramda',
-    version='0.4.7',
+    version='0.4.8',
     description='Python clone of ramda.js (ramdajs.com)',
     url='http://github.com/slavaGanzin/ramda.py',
     author='Slava Ganzin',
