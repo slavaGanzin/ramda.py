@@ -184,6 +184,7 @@ from .times import times
 from .to_lower import to_lower
 from .to_pairs import to_pairs
 from .to_upper import to_upper
+from .transpose import transpose
 from .trim import trim
 from .try_catch import try_catch
 from .unapply import unapply
