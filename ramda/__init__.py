@@ -90,9 +90,9 @@ from .intersperse import intersperse
 from .invert import invert
 from .invert_obj import invert_obj
 from .invoker import invoker
+from .is_ import is_
 from .is_empty import is_empty
 from .is_nil import is_nil
-from .isinstance import isinstance
 from .join import join
 from .juxt import juxt
 from .keys import keys
@@ -149,6 +149,7 @@ from .product import product
 from .project import project
 from .prop import prop
 from .prop_eq import prop_eq
+from .prop_is import prop_is
 from .prop_or import prop_or
 from .prop_satisfies import prop_satisfies
 from .props import props
