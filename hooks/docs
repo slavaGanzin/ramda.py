@@ -17,7 +17,7 @@ files = filter_functions(os.listdir(SOURCES))
 cutPy = replace(r'.py$', '')
 
 for filename in files:
-    name = cutPy(filename)
+    name = to_lower(cutPy(filename))
     source = open(SOURCES + filename).read()
 
     func = find(prop_eq('name', name), docs)
