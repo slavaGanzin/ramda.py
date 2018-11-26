@@ -20,7 +20,7 @@ def for_each_obj_indexed_test():
     assert_equal(
         for_each_obj_indexed(
             obj_to_pairs,
-            [1,2]
+            [1, 2]
         ), None)
 
     assert_equal(pairs, [[0, 1], [1, 2]])

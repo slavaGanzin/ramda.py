@@ -30,5 +30,6 @@ function so that the new function reports the correct arity"""
 
         run.append(t.__name__ + '(' + args[i] + ')')
 
-    f = 'lambda ' + ', '.join(args[:len(transformers)]) + ': ' + function.__name__ + '(' + ','.join(run) + ')'
+    f = 'lambda ' + ', '.join(args[:len(transformers)]) + \
+        ': ' + function.__name__ + '(' + ','.join(run) + ')'
     return curry(eval(f, F))
