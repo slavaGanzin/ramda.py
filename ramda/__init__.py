@@ -65,6 +65,7 @@ from .find_last_index import find_last_index
 from .flatten import flatten
 from .flip import flip
 from .for_each import for_each
+from .for_each_obj_indexed import for_each_obj_indexed
 from .from_pairs import from_pairs
 from .getitem import getitem
 from .greater import greater

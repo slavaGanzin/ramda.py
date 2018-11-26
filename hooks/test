@@ -1,3 +1,3 @@
 #!/usr/bin/env fish
 
-inotifyrun . ./hooks/pre-commit
+inotifyrun .  nosetests  -x && pycodestyle --ignore E501 && nosetests --with-coverage
