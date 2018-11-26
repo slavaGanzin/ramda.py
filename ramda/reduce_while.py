@@ -1,4 +1,5 @@
 from ramda.curry import curry
+from ramda.reduced import Reduced
 
 
 @curry
@@ -11,5 +12,9 @@ value of the accumulator"""
     for x in list:
         if not predicate(accumulator, x):
             return accumulator
+
+        if isinstance(accumulator, Reduced):
+            return accumulator.unwrap()
+
         accumulator = iterator(accumulator, x)
     return accumulator

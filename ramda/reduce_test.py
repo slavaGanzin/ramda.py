@@ -1,5 +1,5 @@
-from .reduce import reduce
-from ramda.private.asserts import assert_equal
+from ramda import *
+from ramda.private.asserts import *
 
 
 def string_append(s1, s2):

@@ -12,4 +12,4 @@ fn receives three argument: (value, key, obj)"""
     else:
         X = enumerate(xs)
 
-    [f(v, k) for k,v in X]
+    [f(v, k) for k, v in X]

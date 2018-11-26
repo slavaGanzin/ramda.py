@@ -155,6 +155,7 @@ from .props import props
 from .range import range
 from .reduce import reduce
 from .reduce_while import reduce_while
+from .reduced import reduced
 from .reject import reject
 from .remove import remove
 from .repeat import repeat
