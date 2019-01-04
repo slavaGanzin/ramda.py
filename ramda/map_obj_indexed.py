@@ -8,12 +8,13 @@ def map_obj_indexed(f, xs):
 arguments: (value, key, obj). If only the value is significant, use
 map instead"""
     if isinstance(xs, collections.Mapping):
-        X = xs.items()
+        obj = xs.items()
     else:
-        X = enumerate(xs)
+        obj = enumerate(xs)
 
     f_dict = {}
 
-    for k, v in X:
-        f_dict[k] = f(v)
+    for key, value in obj:
+        f_dict[key] = f(value, key, obj)
+
     return f_dict

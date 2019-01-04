@@ -18,4 +18,4 @@ expected_dict = {
 
 
 def map_dict_test():
-    assert_dicts_equal(map_obj_indexed(inc, test_dict), expected_dict)
+    assert_dicts_equal(map_obj_indexed(lambda value, key, object: inc(value), test_dict), expected_dict)
