@@ -1,12 +1,5 @@
 from ramda.curry import curry
-
-
-@curry
-def prop(key, x):
-    try:
-        return x[key]
-    except KeyError:
-        return None
+from ramda.prop import prop
 
 
 @curry
