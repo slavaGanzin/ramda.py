@@ -1,5 +1,5 @@
 from collections import Iterable
-from past.builtins import basestring
+from six import string_types
 from .is_ import is_
 from .curry import curry
 
@@ -20,4 +20,4 @@ and putting them in a new array, depth-first"""
     return list(_flatten_until(xs))
 
 
-flatten = flatten_until(is_(basestring))
+flatten = flatten_until(is_(string_types))
