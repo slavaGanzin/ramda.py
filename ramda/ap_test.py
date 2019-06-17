@@ -8,26 +8,20 @@ from ramda.private.asserts import *
 
 def ap_nocurry_test():
     assert_iterables_equal(
-        ap([concat('tasty '), to_upper], ['pizza', 'salad']),
-        ["tasty pizza", "tasty salad", "PIZZA", "SALAD"]
+        ap([concat("tasty "), to_upper], ["pizza", "salad"]),
+        ["tasty pizza", "tasty salad", "PIZZA", "SALAD"],
     )
 
-    assert_iterables_equal(
-        ap([multiply(2), add(3)], [1, 2, 3]),
-        [2, 4, 6, 4, 5, 6]
-    )
+    assert_iterables_equal(ap([multiply(2), add(3)], [1, 2, 3]), [2, 4, 6, 4, 5, 6])
 
 
 def ap_curry_test():
     assert_iterables_equal(
-        ap([concat('tasty '), to_upper])(['pizza', 'salad']),
-        ["tasty pizza", "tasty salad", "PIZZA", "SALAD"]
+        ap([concat("tasty "), to_upper])(["pizza", "salad"]),
+        ["tasty pizza", "tasty salad", "PIZZA", "SALAD"],
     )
 
-    assert_iterables_equal(
-        ap([multiply(2), add(3)])([1, 2, 3]),
-        [2, 4, 6, 4, 5, 6]
-    )
+    assert_iterables_equal(ap([multiply(2), add(3)])([1, 2, 3]), [2, 4, 6, 4, 5, 6])
 
 
 def ap_S_combinator_test():

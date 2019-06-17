@@ -1,5 +1,3 @@
-
-
 class DomainAssertionError(AssertionError):
     def __init__(self, in_domain, f, domain_args):
         name = f.__name__
@@ -7,12 +5,7 @@ class DomainAssertionError(AssertionError):
         template = "Expected the argument{0} {1} {2} in the domain of {3}"
         plural_suffix = "" if len(domain_args) == 1 else "s"
         in_domain_str = "to be" if in_domain else "not to be"
-        message = template.format(
-            plural_suffix,
-            domain_args_str,
-            in_domain_str,
-            name
-        )
+        message = template.format(plural_suffix, domain_args_str, in_domain_str, name)
         super(DomainAssertionError, self).__init__(message)
 
 

@@ -8,16 +8,16 @@ def f(self):
 
 class C(object):
     def name(self):
-        return 'C'
+        return "C"
 
 
 def no_bind_test():
-    assert_equal(f(C()), 'C')
+    assert_equal(f(C()), "C")
 
 
 def bind_nocurry_test():
-    assert_equal(bind(f)(C())(), 'C')
+    assert_equal(bind(f)(C())(), "C")
 
 
 def bind_curry_test():
-    assert_equal(bind(f, C())(), 'C')
+    assert_equal(bind(f, C())(), "C")

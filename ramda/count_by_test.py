@@ -10,5 +10,5 @@ def numbers_test():
 
 
 def letter_test():
-    letters = ['a', 'b', 'A', 'a', 'B', 'c']
-    assert_equal(count_by(to_lower)(letters), {'a': 3, 'b': 2, 'c': 1})
+    letters = ["a", "b", "A", "a", "B", "c"]
+    assert_equal(count_by(to_lower)(letters), {"a": 3, "b": 2, "c": 1})

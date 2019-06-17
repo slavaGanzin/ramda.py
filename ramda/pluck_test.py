@@ -1,20 +1,11 @@
 from .pluck import pluck
 
 
-data = [{
-    'a': 'a1',
-    'b': 'b1'
-}, {
-    1: 1,
-    2: 2
-}, {
-    'a': 'a2',
-    'b': 'b2'
-}]
+data = [{"a": "a1", "b": "b1"}, {1: 1, 2: 2}, {"a": "a2", "b": "b2"}]
 
 
 def a_test():
-    assert pluck('a', data) == ['a1', None, 'a2']
+    assert pluck("a", data) == ["a1", None, "a2"]
 
 
 def one_test():

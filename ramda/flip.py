@@ -1,7 +1,4 @@
-from .curry import (
-    curry,
-    curry_by_spec,
-)
+from .curry import curry, curry_by_spec
 
 from ramda.private.curry_spec import make_func_curry_spec
 

@@ -1,14 +1,8 @@
-
-
 class EqualityAssertionError(AssertionError):
     def __init__(self, equal, actual, expected):
         template = "Expected {0} {1} {2}"
         equal_str = "to equal" if equal else "not to equal"
-        message = template.format(
-            str(actual),
-            equal_str,
-            str(expected)
-        )
+        message = template.format(str(actual), equal_str, str(expected))
         super(EqualityAssertionError, self).__init__(message)
 
 

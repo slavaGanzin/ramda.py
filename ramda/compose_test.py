@@ -15,9 +15,5 @@ def sub2(x):
 
 
 def compose_test():
-    composed = compose(
-        sub2,
-        double,
-        add10
-    )
+    composed = compose(sub2, double, add10)
     assert_equal(composed(100), 218)

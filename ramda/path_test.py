@@ -2,13 +2,7 @@ from .path import path
 from ramda.private.asserts import assert_equal
 
 
-test_dict = {
-    "a": {
-        "b": {
-            "c": "foo"
-        }
-    }
-}
+test_dict = {"a": {"b": {"c": "foo"}}}
 
 
 def path_nocurry_test():

@@ -15,6 +15,6 @@ def f2_test():
     f2 = curry_n(2, f)
     try:
         f2(1, 2)
-        assert_equal(False, 'Should raise')
+        assert_equal(False, "Should raise")
     except TypeError:
         pass

@@ -21,7 +21,7 @@ def run_f_curry_cases(fc):
 
 
 def curry_by_spec_test():
-    curry_spec = CurrySpec(['x', 'y', 'z'], {'z': 3})
+    curry_spec = CurrySpec(["x", "y", "z"], {"z": 3})
     fc = curry_by_spec(curry_spec, f)
     run_f_curry_cases(fc)
 

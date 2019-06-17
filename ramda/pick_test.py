@@ -2,17 +2,9 @@ from ramda import *
 from ramda.private.asserts import *
 
 
-test_dict = {
-    "a": 1,
-    "b": 2,
-    "c": 3,
-    "d": 4
-}
+test_dict = {"a": 1, "b": 2, "c": 3, "d": 4}
 
-expected_dict = {
-    "b": 2,
-    "d": 4
-}
+expected_dict = {"b": 2, "d": 4}
 
 
 def pick_nocurry_test():

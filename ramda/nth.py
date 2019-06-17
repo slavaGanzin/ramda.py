@@ -9,5 +9,5 @@ element at index length + n is returned"""
         return xs[n]
     except IndexError:
         if type(xs) is str:
-            return ''
+            return ""
         return None

@@ -7,7 +7,6 @@ def is_upper_case(val, key):
 
 
 def pick_by_test():
-    assert_equal(pick_by(
-        is_upper_case,
-        {'a': 1, 'b': 2, 'A': 3, 'B': 4}),
-        {'A': 3, 'B': 4})
+    assert_equal(
+        pick_by(is_upper_case, {"a": 1, "b": 2, "A": 3, "B": 4}), {"A": 3, "B": 4}
+    )

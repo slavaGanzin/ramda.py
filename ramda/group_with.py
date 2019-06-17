@@ -14,9 +14,9 @@ Only adjacent elements are passed to the comparison function"""
         if predicate(group[-1], x):
             group += [x]
         else:
-            out.append(''.join(group) if is_str else group)
+            out.append("".join(group) if is_str else group)
             group = [x]
 
-    out.append(''.join(group) if is_str else group)
+    out.append("".join(group) if is_str else group)
 
     return out

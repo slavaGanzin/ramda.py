@@ -10,7 +10,7 @@ iterator function.
 The iterator function receives one argument: (seed)"""
     pair = iterator(seed)
     result = []
-    while (pair and (pair)):
+    while pair and (pair):
         result.append(pair[0])
         pair = iterator(pair[1])
 

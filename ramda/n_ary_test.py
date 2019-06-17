@@ -28,12 +28,12 @@ def n_ary_curry_test():
     assert_equal(takes_one_arg(1), [1, None])
     try:
         takes_one_arg(1, 2, 3)
-        assert False, 'takes_one_arg(1,2,3) should throw'
+        assert False, "takes_one_arg(1,2,3) should throw"
     except TypeError:
         pass
     try:
         takes_one_arg()
-        assert False, 'takes_one_arg() should throw'
+        assert False, "takes_one_arg() should throw"
     except TypeError:
         pass
 
@@ -41,13 +41,13 @@ def n_ary_curry_test():
 
     try:
         takes_no_arg(1)
-        assert False, 'takes_no_arg(1) should throw'
+        assert False, "takes_no_arg(1) should throw"
     except TypeError:
         pass
 
     try:
         n_ary(-1)(lambda: 1)
-        assert False, 'n_ary(-1)(print) should throw'
+        assert False, "n_ary(-1)(print) should throw"
     except ValueError:
         pass
 

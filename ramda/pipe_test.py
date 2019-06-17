@@ -15,9 +15,5 @@ def sub2(x):
 
 
 def pipe_test():
-    piped = pipe(
-        sub2,
-        double,
-        add10
-    )
+    piped = pipe(sub2, double, add10)
     assert_equal(piped(100), (100 - 2) * 2 + 10)

@@ -1,5 +1,3 @@
-
-
 class PredicateCaseAssertionError(AssertionError):
     def __init__(self, expected, pred, v):
         name = pred.__name__

@@ -11,6 +11,4 @@ def reducer(acc, item):
 
 
 def reduced_test():
-    assert_equal(
-        reduce(reducer, [], [1, 2, 3, 4, 5]),
-        [1, 2, 3])
+    assert_equal(reduce(reducer, [], [1, 2, 3, 4, 5]), [1, 2, 3])

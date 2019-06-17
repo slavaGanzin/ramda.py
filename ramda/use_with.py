@@ -16,7 +16,7 @@ function so that the new function reports the correct arity"""
     try:
         args = inspect.getfullargspec(function).args
     except TypeError:
-        args = ['argument' + str(i) for i, x in enumerate(transformers)]
+        args = ["argument" + str(i) for i, x in enumerate(transformers)]
 
     F = {function.__name__: function}
 
@@ -26,10 +26,17 @@ function so that the new function reports the correct arity"""
         try:
             args[i]
         except IndexError:
-            args.append('argument' + str(i))
+            args.append("argument" + str(i))
 
-        run.append(t.__name__ + '(' + args[i] + ')')
+        run.append(t.__name__ + "(" + args[i] + ")")
 
-    f = 'lambda ' + ', '.join(args[:len(transformers)]) + \
-        ': ' + function.__name__ + '(' + ','.join(run) + ')'
+    f = (
+        "lambda "
+        + ", ".join(args[: len(transformers)])
+        + ": "
+        + function.__name__
+        + "("
+        + ",".join(run)
+        + ")"
+    )
     return curry(eval(f, F))

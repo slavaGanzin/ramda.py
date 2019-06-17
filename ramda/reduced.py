@@ -1,7 +1,7 @@
 import collections
 
 
-class Reduced():
+class Reduced:
     def __init__(self, value):
         self.value = value
 

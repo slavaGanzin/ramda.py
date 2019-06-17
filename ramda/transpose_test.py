@@ -4,11 +4,11 @@ from ramda import *
 
 def transpose_test():
     assert_equal(
-        transpose([[1, 'a'], [2, 'b'], [3, 'c']]),
-        [[1, 2, 3], ['a', 'b', 'c']])
+        transpose([[1, "a"], [2, "b"], [3, "c"]]), [[1, 2, 3], ["a", "b", "c"]]
+    )
     assert_equal(
-        transpose([[1, 2, 3], ['a', 'b', 'c']]),
-        [[1, 'a'], [2, 'b'], [3, 'c']])
+        transpose([[1, 2, 3], ["a", "b", "c"]]), [[1, "a"], [2, "b"], [3, "c"]]
+    )
 
     # assert_equal(
     #     transpose([[10, 11], [20], [], [30, 31, 32]]),

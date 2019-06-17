@@ -1,7 +1,7 @@
 from collections import namedtuple
 
-CurrySpec = namedtuple('CurrySpec', 'arg_names arg_defaults')
-ArgValues = namedtuple('ArgValues', 'args kwargs')
+CurrySpec = namedtuple("CurrySpec", "arg_names arg_defaults")
+ArgValues = namedtuple("ArgValues", "args kwargs")
 
 
 def num_args(arg_values):

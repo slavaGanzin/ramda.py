@@ -9,4 +9,4 @@ def f(x, y, z=3):
 
 def make_func_curry_spec_test():
     f_spec = make_func_curry_spec(f)
-    assert_equal(f_spec, CurrySpec(['x', 'y', 'z'], {'z': 3}))
+    assert_equal(f_spec, CurrySpec(["x", "y", "z"], {"z": 3}))

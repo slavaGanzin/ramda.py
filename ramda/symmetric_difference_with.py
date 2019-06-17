@@ -10,5 +10,5 @@ second list, but not both. Duplication is determined according to the value
 returned by applying the supplied predicate to two list elements"""
     return concat(
         difference_with(predicate, first, second),
-        difference_with(predicate, second, first)
+        difference_with(predicate, second, first),
     )

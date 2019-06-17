@@ -11,11 +11,10 @@ def arg_values_invalid(curry_spec, arg_values):
 
 def check_arg_values_valid(curry_spec, arg_values):
     if arg_values_invalid(curry_spec, arg_values):
-        template = "Keyword args {0} and positional args {1} overlap for " + \
-            "arg names {2}"
+        template = (
+            "Keyword args {0} and positional args {1} overlap for " + "arg names {2}"
+        )
         message = template.format(
-            arg_values.kwargs,
-            arg_values.args,
-            curry_spec.arg_names
+            arg_values.kwargs, arg_values.args, curry_spec.arg_names
         )
         raise ValueError(message)

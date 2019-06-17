@@ -1,10 +1,11 @@
 from functools import wraps, partial
-from ramda.private.curry_spec import \
-    CurrySpec, \
-    ArgValues, \
-    make_func_curry_spec, \
-    remove_args_from_curry_spec, \
-    arg_values_fulfill_curry_spec
+from ramda.private.curry_spec import (
+    CurrySpec,
+    ArgValues,
+    make_func_curry_spec,
+    remove_args_from_curry_spec,
+    arg_values_fulfill_curry_spec,
+)
 
 
 def curry_by_spec(curry_spec, f):
@@ -17,6 +18,7 @@ def curry_by_spec(curry_spec, f):
             partialed_f = wraps(f)(partial(f, *args, **kwargs))
             new_spec = remove_args_from_curry_spec(curry_spec, arg_values)
             return curry_by_spec(new_spec, partialed_f)
+
     return curried
 
 

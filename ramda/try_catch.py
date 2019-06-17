@@ -8,6 +8,7 @@ result. If the tryer does throw, the returned function evaluates the
 catcher function and returns its result. Note that for effective
 composition with this function, both the tryer and catcher functions
 must return the same type of results"""
+
     def exe(*args):
         try:
             return tryer(*args)

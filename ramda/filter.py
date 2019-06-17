@@ -9,10 +9,10 @@ given predicate. Filterable objects include plain objects or any object
 that has a filter method such as Array.
 Dispatches to the filter method of the second argument, if present.
 Acts as a transducer if a transformer is given in list position"""
-    if not hasattr(xs, '__iter__'):
+    if not hasattr(xs, "__iter__"):
         return []
 
-    if hasattr(xs, 'values'):
+    if hasattr(xs, "values"):
         out = {}
         for k, v in xs.items():
             if p(v):
