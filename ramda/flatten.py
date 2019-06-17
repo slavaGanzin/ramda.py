@@ -1,4 +1,4 @@
-from collections import Iterable
+from collections.abc import Iterable
 from six import string_types
 from .is_ import is_
 from .curry import curry

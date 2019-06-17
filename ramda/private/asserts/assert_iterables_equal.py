@@ -1,5 +1,5 @@
 from .assert_equal import assert_equal, EqualAssertionError
-from collections import Iterable
+from collections.abc import Iterable
 
 
 def is_iterable(v):

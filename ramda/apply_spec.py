@@ -1,4 +1,3 @@
-from collections import abc
 from ramda.curry import curry
 from ramda.clone import clone
 
