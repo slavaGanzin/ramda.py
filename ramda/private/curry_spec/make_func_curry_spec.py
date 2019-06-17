@@ -1,6 +1,8 @@
-from inspect import getargspec
+from inspect import getfullargspec
 from .curry_spec import CurrySpec
 from ..accepts_varargs import accepts_varargs
+
+from inspect import signature
 
 
 class CurrySpecVarargError(ValueError):
@@ -12,11 +14,11 @@ class CurrySpecVarargError(ValueError):
 
 
 def func_arg_names(f):
-    return getargspec(f).args
+    return getfullargspec(f).args
 
 
 def func_arg_defaults(f):
-    argspec = getargspec(f)
+    argspec = getfullargspec(f)
     arg_names = argspec.args
     default_arg_values = argspec.defaults or []
     num_defaults = len(default_arg_values)
