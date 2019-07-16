@@ -8,4 +8,4 @@ def trim_test():
 
 
 def trim_utf_test():
-    assert_equal(trim(u"      її  "), u"її")
+    assert_equal(trim("      її  "), "її")

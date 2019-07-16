@@ -1,3 +1,4 @@
-def last(xs):
+def last(list):
     """Returns the last element of the given list or string"""
-    return xs[-1]
+    for x in reversed(list):
+        return x

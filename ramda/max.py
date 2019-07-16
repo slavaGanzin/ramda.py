@@ -3,6 +3,6 @@ import builtins
 
 
 @curry
-def max(xs):
+def max(x, y):
     """Returns the larger of its two arguments"""
-    return builtins.max(xs)
+    return builtins.max([x, y])

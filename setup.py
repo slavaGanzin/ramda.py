@@ -22,7 +22,7 @@ setup(
         'ramda.private',
         'ramda.private.curry_spec',
     ],
-    install_requires=['future'],
+    install_requires=['future', 'toolz'],
     tests_require=['nose', 'coverage', 'mock'],
     cmdclass={
         'build_py': PasteurizeBuildCommand

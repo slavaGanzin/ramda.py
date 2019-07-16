@@ -1,4 +1,5 @@
-def head(xs):
+def head(list):
     """Returns the first element of the given list or string. In some libraries
 this function is named first"""
-    return xs[0]
+    for x in list:
+        return x

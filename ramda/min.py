@@ -3,6 +3,6 @@ import builtins
 
 
 @curry
-def min(xs):
+def min(x, y):
     """Returns the smaller of its two arguments"""
-    return builtins.min(xs)
+    return builtins.min([x, y])
