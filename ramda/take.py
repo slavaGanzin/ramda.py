@@ -8,6 +8,9 @@ transducer/transformer (or object with a take method).
 Dispatches to the take method of the second argument, if present"""
     acc = []
 
+    if isinstance(list, str):
+        return list[:n]
+
     if len(list) <= n:
         return list
 
