@@ -16,7 +16,13 @@ clear_description = replace(r'\.?\n$', '')
 files = filter_functions(os.listdir(SOURCES))
 cutPy = replace(r'.py$', '')
 
-for filename in files:
+
+readme = """
+#Docs
+```python
+"""
+
+for filename in sorted(files):
     name = to_lower(cutPy(filename))
     source = open(SOURCES + filename).read()
 
@@ -35,6 +41,23 @@ for filename in files:
         source)
 
     open(SOURCES + filename, 'w').write(modified)
+
+    try:
+        signature = head(match(r'def (.*):\n', source))
+    except IndexError:
+        signature = source
+    readme = f"{readme}{signature}{doc_string}\n"
+
+
+with open('./README.md', 'r') as f:
+    readme = replace(
+        r'#Docs\n```python\n(.*\n)+```',
+        f'{readme}```',
+        f.read()
+    )
+
+with open('./README.md', 'w') as f:
+    f.write(readme)
 
 
 print('\n\nnot done:')

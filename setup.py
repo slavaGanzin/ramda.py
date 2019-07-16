@@ -1,6 +1,7 @@
 from setuptools import setup
 from setuptools.command.build_py import build_py
 from subprocess import call
+from os import path
 
 
 class PasteurizeBuildCommand(build_py):
@@ -9,6 +10,9 @@ class PasteurizeBuildCommand(build_py):
         call(["pasteurize", "./ramda"])
         build_py.run(self)
 
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
 setup(
     name='ramda',
@@ -27,5 +31,7 @@ setup(
     cmdclass={
         'build_py': PasteurizeBuildCommand
     },
-    zip_safe=False
+    long_description=long_description,
+    long_description_content_type='text/markdown',
+    zip_safe=False,
 )
