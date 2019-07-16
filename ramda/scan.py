@@ -1,4 +1,4 @@
-from ramda.curry import curry
+from toolz import curry
 
 
 def scan(function, accumulator, list):

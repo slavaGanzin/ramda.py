@@ -1,4 +1,4 @@
-from ramda.curry import curry
+from toolz import curry
 from .any import any
 from functools import partial
 

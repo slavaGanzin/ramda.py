@@ -1,4 +1,4 @@
-from ramda.curry import curry
+from toolz import curry
 from builtins import range as _range
 
 

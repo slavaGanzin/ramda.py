@@ -1,5 +1,5 @@
 import types
-from ramda.curry import curry
+from toolz import curry
 
 
 @curry

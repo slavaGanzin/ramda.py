@@ -6,9 +6,9 @@ def positive(x):
 
 
 def complement_nocurry_test():
-    assert complement(positive, 0)
-    assert complement(positive, -5)
-    assert not complement(positive, 5)
+    assert complement(positive)(0)
+    assert complement(positive)(-5)
+    assert not complement(positive)(5)
 
 
 def complement_curry_test():

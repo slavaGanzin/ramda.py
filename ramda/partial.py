@@ -1,4 +1,4 @@
-from ramda.curry import curry
+from toolz import curry
 from ramda.private.curry_spec.make_func_curry_spec import CurrySpecVarargError
 
 

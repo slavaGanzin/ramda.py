@@ -1,4 +1,4 @@
-from ramda.curry import curry
+from toolz import curry
 from ramda.none import none
 
 

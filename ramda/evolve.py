@@ -1,4 +1,4 @@
-from ramda.curry import curry
+from toolz import curry
 from ramda.clone import clone
 from ramda.path import path
 from ramda.assoc_path import assoc_path

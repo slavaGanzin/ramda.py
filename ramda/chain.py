@@ -1,4 +1,4 @@
-from ramda.curry import curry
+from toolz import curry
 from .map import map
 from .concat import concat
 from .reduce import reduce

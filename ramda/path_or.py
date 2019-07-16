@@ -1,4 +1,4 @@
-from ramda.curry import curry
+from toolz import curry
 from ramda.default_to import default_to
 from ramda.path import path as _path
 

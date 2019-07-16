@@ -1,4 +1,4 @@
-from ramda.curry import curry
+from toolz import curry
 from ramda.difference_with import difference_with
 from ramda.concat import concat
 

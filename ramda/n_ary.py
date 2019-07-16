@@ -1,5 +1,5 @@
 import inspect
-from ramda.curry import curry
+from toolz import curry
 
 
 def generate_args(spec, n):

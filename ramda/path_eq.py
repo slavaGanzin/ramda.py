@@ -1,4 +1,4 @@
-from ramda.curry import curry
+from toolz import curry
 from ramda.equals import equals
 from ramda.path import path as _path
 
