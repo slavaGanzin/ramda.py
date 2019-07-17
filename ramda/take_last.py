@@ -6,9 +6,6 @@ from builtins import list as _list
 def take_last(n, list):
     """Returns a new list containing the last n elements of the given list.
 If n > list.length, returns a list of list.length elements"""
-    if len(list) <= n:
-        return list
-
     if isinstance(list, str):
         return list[-n:]
 
@@ -16,7 +13,9 @@ If n > list.length, returns a list of list.length elements"""
 
     i = 0
     for e in reversed(list):
-        i += 1
-        if i > n:
+        if i >= n:
             return acc
         acc.insert(0, e)
+        i += 1
+
+    return acc

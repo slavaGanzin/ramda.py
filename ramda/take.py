@@ -11,12 +11,11 @@ Dispatches to the take method of the second argument, if present"""
     if isinstance(list, str):
         return list[:n]
 
-    if len(list) <= n:
-        return list
-
     i = 0
     for e in list:
-        i += 1
-        if i > n:
+        if i >= n:
             return acc
+        i += 1
         acc.append(e)
+
+    return acc

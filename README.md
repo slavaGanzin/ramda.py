@@ -26,6 +26,9 @@ pip install ramda
 
 
 
+
+
+
 #Docs
 ```python
 T(*args)
@@ -296,12 +299,7 @@ to the supplied predicate function, skipping elements until the predicate
 function returns a falsy value. The predicate function is applied to one argument:
 (value)"""
 
-from ramda.drop_repeats_with import drop_repeats_with
-from ramda.equals import equals
-
-
-drop_repeats = drop_repeats_with(equals)
-
+None
     """Returns a new list without any consecutively repeating elements.
 R.equals is used to determine equality.
 Acts as a transducer if a transformer is given in list position"""
@@ -593,11 +591,7 @@ map_obj_indexed(f, xs)
 arguments: (value, key, obj). If only the value is significant, use
 map instead"""
 
-from toolz import curry
-import re
-
-match = curry(re.findall)
-
+None
     """Tests a regular expression against a String. Note that this function will
 return an empty array when there are no matches. This differs from
 String.prototype.match
@@ -710,13 +704,7 @@ partial(f, args)
 When applied, g returns the result of applying f to the arguments
 provided initially followed by the arguments provided to g"""
 
-from toolz import curry
-from ramda.juxt import juxt
-from ramda.filter import filter
-from ramda.reject import reject
-
-partition = juxt([filter, reject])
-
+None
     """Takes a predicate and a list or other Filterable object and returns the
 pair of filterable objects of the same type of elements which do and do not
 satisfy, the predicate, respectively. Filterable objects include plain objects or any object
