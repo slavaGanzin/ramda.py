@@ -29,6 +29,7 @@ pip install ramda
 
 
 
+
 #Docs
 ```python
 T(*args)
@@ -495,7 +496,7 @@ insert_all(position, elements, list)
 destructive: it returns a copy of the list with the changes.
 No lists have been harmed in the application of this function"""
 
-intersection(xs, ys)
+intersection(list1, list2)
     """Combines two lists into a set (i.e. no duplicates) composed of those
 elements common to both lists"""
 
