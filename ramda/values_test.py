@@ -6,4 +6,4 @@ test_dict = {"a": 1, "b": 2, "c": 3}
 
 
 def values_test():
-    assert_iterables_equal(set(values(test_dict)), set([1, 3, 2]))
+    assert_iterables_equal(values(test_dict), [1, 2, 3])

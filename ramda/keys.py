@@ -7,4 +7,4 @@ def keys(dict):
 the supplied object.
 Note that the order of the output array is not guaranteed to be consistent
 across different JS platforms"""
-    return dict.keys()
+    return list(dict.keys())
