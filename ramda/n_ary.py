@@ -1,14 +1,7 @@
 import inspect
 from toolz import curry
 
-
-def generate_args(spec, n):
-    args1 = spec.args
-    n_original = len(spec.args)
-    add_args = ["None"] * (len(args1) - n)
-    args1.extend(["x" + str(i) for i in range(0, n - len(args1))])
-    args2 = args1[0 : min(n, n_original)] + add_args
-    return ", ".join(args1[0:n]), ", ".join(args2)
+from ramda.private.generate_args import generate_args
 
 
 @curry
@@ -19,6 +12,6 @@ supplied function"""
     if n < 0:
         raise ValueError("First argument to n_ary must be a non-negative integer")
 
-    args1, args2 = generate_args(inspect.getfullargspec(f), n)
+    args1, args2 = generate_args(inspect.getfullargspec(f).args, n)
 
     return eval("lambda " + args1 + ": f(" + args2 + ")", {"f": f})
