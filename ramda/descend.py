@@ -1,6 +1,6 @@
 def descend(predicate):
     """Makes a descending comparator function out of a function that returns a value
-that can be compared with < and >"""
+    that can be compared with < and >"""
 
     def comparator(a, b):
         _a, _b = predicate(a), predicate(b)

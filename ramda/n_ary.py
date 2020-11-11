@@ -7,8 +7,8 @@ from ramda.private.generate_args import generate_args
 @curry
 def n_ary(n, f):
     """Wraps a function of any arity (including nullary) in a function that accepts
-exactly n parameters. Any extraneous parameters will not be passed to the
-supplied function"""
+    exactly n parameters. Any extraneous parameters will not be passed to the
+    supplied function"""
     if n < 0:
         raise ValueError("First argument to n_ary must be a non-negative integer")
 

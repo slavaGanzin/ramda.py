@@ -5,7 +5,7 @@ from builtins import list as _list
 @curry
 def take_last(n, list):
     """Returns a new list containing the last n elements of the given list.
-If n > list.length, returns a list of list.length elements"""
+    If n > list.length, returns a list of list.length elements"""
     if isinstance(list, str):
         return list[-n:]
 

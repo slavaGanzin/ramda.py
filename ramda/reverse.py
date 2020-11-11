@@ -4,7 +4,7 @@ from builtins import list as _list
 
 def reverse(list):
     """Returns a new list or string with the elements or characters in reverse
-order"""
+    order"""
     if isinstance(list, str):
         return "".join(reversed(list))
 

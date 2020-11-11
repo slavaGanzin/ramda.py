@@ -7,7 +7,7 @@ from .curry import curry
 @curry
 def flatten_until(is_leaf, xs):
     """Returns a new list by pulling every item out of it (and all its sub-arrays)
-and putting them in a new array, depth-first"""
+    and putting them in a new array, depth-first"""
 
     def _flatten_until(items):
         if is_(Iterable, items) and not is_leaf(items):

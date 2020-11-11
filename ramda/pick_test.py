@@ -12,5 +12,5 @@ def pick_nocurry_test():
 
 
 def pick_curry_test():
-    pickBD = pick(["b", "d"])
-    assert_dicts_equal(pickBD(test_dict), expected_dict)
+    assert_dicts_equal(pick(["b", "d"])(test_dict), expected_dict)
+    assert_dicts_equal(pick(["there_is_no_key"])(test_dict), {})

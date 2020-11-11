@@ -37,6 +37,8 @@ pip install ramda
 
 
 
+
+
 #Docs
 ```python
 T(*args)
@@ -667,7 +669,7 @@ mathematical modulo see mathMod"""
 multiply(x, y)
     """Multiplies two numbers. Equivalent to a * b but curried"""
 
-generate_args(spec, n)
+n_ary(n, f)
     """Wraps a function of any arity (including nullary) in a function that accepts
 exactly n parameters. Any extraneous parameters will not be passed to the
 supplied function"""

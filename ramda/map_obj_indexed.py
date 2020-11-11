@@ -5,8 +5,8 @@ from toolz import curry
 @curry
 def map_obj_indexed(f, xs):
     """An Object-specific version of map. The function is applied to three
-arguments: (value, key, obj). If only the value is significant, use
-map instead"""
+    arguments: (value, key, obj). If only the value is significant, use
+    map instead"""
     if isinstance(xs, collections.Mapping):
         obj = xs.items()
     else:

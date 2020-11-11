@@ -7,7 +7,7 @@ from ramda.private.curry_spec import make_func_curry_spec
 @curry
 def flip(f):
     """Returns a new function much like the supplied one, except that the first two
-arguments' order is reversed"""
+    arguments' order is reversed"""
     args = inspect.getfullargspec(f).args
 
     return eval(
