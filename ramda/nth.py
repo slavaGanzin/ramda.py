@@ -7,7 +7,7 @@ def nth(n, xs):
     element at index length + n is returned"""
     try:
         return xs[n]
-    except IndexError:
+    except (IndexError, TypeError):
         if type(xs) is str:
             return ""
         return None

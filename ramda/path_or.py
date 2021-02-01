@@ -9,5 +9,5 @@ def path_or(default, path, value):
     value at that path. Otherwise returns the provided default value"""
     try:
         return default_to(default, _path(path, value))
-    except (KeyError, IndexError):
+    except (KeyError, IndexError, TypeError):
         return default

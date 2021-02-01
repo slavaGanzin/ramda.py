@@ -25,7 +25,7 @@ def use_with(function, transformers):
         F[t.__name__] = t
         try:
             args[i]
-        except IndexError:
+        except (IndexError, TypeError):
             args.append("argument" + str(i))
 
         run.append(t.__name__ + "(" + args[i] + ")")
