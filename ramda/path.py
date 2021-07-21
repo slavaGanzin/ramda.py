@@ -1,6 +1,7 @@
 from toolz import curry
 from ramda.prop import prop
 
+
 @curry
 def path(keys, dict):
     """Retrieve the value at a given path"""

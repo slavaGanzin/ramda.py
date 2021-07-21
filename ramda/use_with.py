@@ -23,7 +23,7 @@ def use_with(function, transformers):
     run = []
     for i, t in enumerate(transformers):
 
-        transformer_name = f'fn_{i}' if t.__name__ == '<lambda>' else t.__name__
+        transformer_name = f"fn_{i}" if t.__name__ == "<lambda>" else t.__name__
 
         F[transformer_name] = t
         try:

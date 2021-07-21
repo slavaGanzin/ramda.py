@@ -5,9 +5,11 @@ alice = {"name": "ALICE", "age": 101}
 favorite = prop("favoriteLibrary")
 favorite_with_default = prop_or("Ramda", "favoriteLibrary")
 
+
 class TestObject:
     def __init__(self):
         pass
+
 
 def prop_or_test():
     assert_equal(favorite(alice), None)
