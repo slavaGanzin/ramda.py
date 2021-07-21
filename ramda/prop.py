@@ -11,5 +11,5 @@ def prop(name, o):
     except (AttributeError, TypeError):
         try:
             return o[name]
-        except KeyError:
+        except (KeyError, TypeError, IndexError):
             return None

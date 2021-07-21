@@ -1,5 +1,5 @@
 from toolz import curry
-
+from ramda.prop import prop
 
 @curry
 def path(keys, dict):
@@ -8,5 +8,5 @@ def path(keys, dict):
         raise ValueError("Expected at least one key, got {0}".format(keys))
     current_value = dict
     for key in keys:
-        current_value = current_value[key]
+        current_value = prop(key, current_value)
     return current_value
