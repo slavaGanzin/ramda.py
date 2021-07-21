@@ -22,14 +22,16 @@ def use_with(function, transformers):
 
     run = []
     for i, t in enumerate(transformers):
-        F[t.__name__] = t
+
+        transformer_name = f'fn_{i}' if t.__name__ == '<lambda>' else t.__name__
+
+        F[transformer_name] = t
         try:
             args[i]
         except (IndexError, TypeError):
             args.append("argument" + str(i))
 
-        run.append(t.__name__ + "(" + args[i] + ")")
-
+        run.append(transformer_name + "(" + args[i] + ")")
     f = (
         "lambda "
         + ", ".join(args[: len(transformers)])
