@@ -1,7 +1,7 @@
 # ramda.py
 
 [![PyPI version](https://badge.fury.io/py/ramda.svg)](https://badge.fury.io/py/ramda)
-[![Build Status](https://travis-ci.org/slavaGanzin/ramda.py.svg?branch=master)](https://travis-ci.org/slavaGanzin/ramda.py) [![Coverage Status](https://coveralls.io/repos/github/slavaGanzin/ramda.py/badge.svg?branch=master)](https://coveralls.io/github/slavaGanzin/ramda.py?branch=master)
+[![Build Status](https://travis-ci.com/slavaGanzin/ramda.py.svg?branch=master)](https://travis-ci.com/slavaGanzin/ramda.py) [![Coverage Status](https://coveralls.io/repos/github/slavaGanzin/ramda.py/badge.svg?branch=master)](https://coveralls.io/github/slavaGanzin/ramda.py?branch=master)
 
 Python Clone of [Ramda.js](http://ramdajs.com)
 
