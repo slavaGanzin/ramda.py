@@ -24,7 +24,7 @@ setup(
     author_email="slava.ganzin@gmail.com",
     packages=["ramda", "ramda.private", "ramda.private.curry_spec"],
     install_requires=["future", "toolz"],
-    tests_require=["nose", "coverage", "mock"],
+    tests_require=["nose", "coverage", "mock", "six"],
     cmdclass={"build_py": PasteurizeBuildCommand},
     long_description=long_description,
     long_description_content_type="text/markdown",
