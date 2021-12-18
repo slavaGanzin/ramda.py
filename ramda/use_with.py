@@ -18,13 +18,14 @@ def use_with(function, transformers):
     except TypeError:
         args = ["argument" + str(i) for i, x in enumerate(transformers)]
 
-    F = {function.__name__: function}
+
+    function_name = "foo" if function.__name__ == "<lambda>" else function.__name__
+    F = {function_name: function}
 
     run = []
     for i, t in enumerate(transformers):
 
         transformer_name = f"fn_{i}" if t.__name__ == "<lambda>" else t.__name__
-
         F[transformer_name] = t
         try:
             args[i]
@@ -33,10 +34,11 @@ def use_with(function, transformers):
 
         run.append(transformer_name + "(" + args[i] + ")")
     f = (
+
         "lambda "
         + ", ".join(args[: len(transformers)])
         + ": "
-        + function.__name__
+        + function_name
         + "("
         + ",".join(run)
         + ")"
