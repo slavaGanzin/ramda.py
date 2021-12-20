@@ -1,6 +1,7 @@
 from toolz import curry
 
 
+@curry
 def try_catch(tryer, catcher):
     """tryCatch takes two functions, a tryer and a catcher. The returned
     function evaluates the tryer; if it does not throw, it simply returns the
