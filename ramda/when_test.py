@@ -2,7 +2,7 @@ from ramda import *
 from ramda.private.asserts import *
 
 
-truncate = when(compose(gt(10), length), pipe(take(10), append("…"), join("")))
+truncate = when(compose(lt(10), length), pipe(take(10), append("…"), join("")))
 
 
 def when_test():
