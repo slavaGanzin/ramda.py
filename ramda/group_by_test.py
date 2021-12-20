@@ -35,3 +35,7 @@ def group_by_curry_test():
 
 def group_by_no_curry_test():
     assert_equal(group_by(grade, students), students_by_grade)
+
+
+def group_by_empty():
+    assert_equal(group_by(grade)([]), {})

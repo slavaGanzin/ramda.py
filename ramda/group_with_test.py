@@ -25,3 +25,5 @@ def group_with_test():
     )
 
     assert_equal(group_with(eq_by(is_vowel), "aestiou"), ["ae", "st", "iou"])
+
+    assert_equal(group_with(equals, ""), [])

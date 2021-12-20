@@ -1,4 +1,5 @@
 from toolz import curry
+from ramda.is_empty import is_empty
 
 
 @curry
@@ -8,6 +9,9 @@ def group_by(f, xs):
     results according to values returned.
     Dispatches to the groupBy method of the second argument, if present.
     Acts as a transducer if a transformer is given in list position"""
+    if is_empty(xs):
+        return {}
+
     acc = {}
     for x in xs:
         key = f(x)
