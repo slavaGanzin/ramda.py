@@ -1,4 +1,4 @@
-from .compose import compose
+from ramda import *
 from ramda.private.asserts import assert_equal
 
 
@@ -17,3 +17,11 @@ def sub2(x):
 def compose_test():
     composed = compose(sub2, double, add10)
     assert_equal(composed(100), 218)
+
+
+def compose_multiple_args_test():
+    assert_equal(compose(negate, add)(1, 2), -3)
+
+
+def compose_empty_args_test():
+    assert_equal(compose(negate, lambda: 42)(), -42)
