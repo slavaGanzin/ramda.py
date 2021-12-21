@@ -1,5 +1,4 @@
 from collections.abc import Iterable
-from six import string_types
 from .is_ import is_
 from .curry import curry
 
@@ -20,4 +19,4 @@ def flatten_until(is_leaf, xs):
     return list(_flatten_until(xs))
 
 
-flatten = flatten_until(is_(string_types))
+flatten = flatten_until(is_(str))

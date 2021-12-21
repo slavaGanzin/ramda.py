@@ -8,7 +8,6 @@ def apply_spec(spec):
     function producing an object of the same structure, by mapping each property
     to the result of calling its associated function with the supplied arguments"""
 
-
     def spec_applier(*args):
         out = clone(spec)
         for k, v in spec.items():
