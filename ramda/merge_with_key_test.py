@@ -2,8 +2,8 @@ from ramda import *
 from ramda.private.asserts import *
 
 
-def concat_values(k, l, r):
-    return concat(l, r) if k == "values" else r
+def concat_values(i, j, k):
+    return concat(j, k) if i == "values" else k
 
 
 def merge_with_key_test():
