@@ -9,7 +9,7 @@ def sort_with(comparators, list):
     def comparator(a, b):
         for c in comparators:
             result = c(a, b)
-            if result is not 0:
+            if result != 0:
                 return result
 
         return 0
