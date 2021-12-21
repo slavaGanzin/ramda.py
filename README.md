@@ -1,9 +1,7 @@
 # ramda.py
 
-[![Build Status](https://github.com/slavaGanzin/ramda.py/actions/workflows/python-package.yml/badge.svg)](https://github.com/slavaGanzin/ramda.py/actions/workflows/python-package.yma)
-
+[![Build Status](https://github.com/slavaGanzin/ramda.py/actions/workflows/python-package.yml/badge.svg)](https://github.com/slavaGanzin/ramda.py/actions/workflows/python-package.yml)
 [![PyPI version](https://badge.fury.io/py/ramda.svg)](https://badge.fury.io/py/ramda)
-
 Python Clone of [Ramda.js](http://ramdajs.com)
 
 Improved fork of [Jack Firth's original impementation](https://github.com/jackfirth/pyramda)
