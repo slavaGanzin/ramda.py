@@ -17,7 +17,7 @@ with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
 
 setup(
     name="ramda",
-    version="0.6.3",
+    version="0.6.4",
     description="Python clone of ramda.js (ramdajs.com)",
     url="http://github.com/slavaGanzin/ramda.py",
     author="Slava Ganzin",
