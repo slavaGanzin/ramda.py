@@ -5,12 +5,12 @@ name: Ramda.py
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -18,17 +18,29 @@ jobs:
         python-version: ["3.8", "3.9"]
 
     steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install nose
+          pip install .
+      - name: Nose
+        run: nosetests
+
+lint:
+  runs-on: ubuntu-latest
+
+  steps:
     - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
+    - name: Set up Python
       uses: actions/setup-python@v2
-      with:
-        python-version: ${{ matrix.python-version }}
     - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        python -m pip install nose black
-        pip install .
+        python -m pip install black, flake8, flake8-black
     - name: Black
-      run: black .
-    - name: Nose
-      run: nosetests
+      run: black --check .
+    - name: Flake8
+      run: flake8 ramda

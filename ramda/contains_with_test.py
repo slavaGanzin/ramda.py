@@ -15,7 +15,7 @@ def contains_with_nocurry_test():
     assert not contains_with(pair_equal, (4, 3), pairs)
 
 
-def contains_with_nocurry_test():
+def contains_with_curry_test():
     contains_pair = contains_with(pair_equal)
     assert contains_pair((1, 2))(pairs)
     assert not contains_pair((4, 3))(pairs)
