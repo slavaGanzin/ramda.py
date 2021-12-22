@@ -31,16 +31,15 @@ jobs:
       - name: Nose
         run: nosetests
 
-lint:
-  runs-on: ubuntu-latest
-
-  steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python
-      uses: actions/setup-python@v2
-    - name: Install dependencies
-        python -m pip install black, flake8, flake8-black
-    - name: Black
-      run: black --check .
-    - name: Flake8
-      run: flake8 ramda
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+      - name: Install dependencies
+          python -m pip install black, flake8, flake8-black
+      - name: Black
+        run: black --check .
+      - name: Flake8
+        run: flake8 ramda
