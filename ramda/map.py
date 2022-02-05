@@ -13,7 +13,7 @@ def map(f, xs):
     Dispatches to the map method of the second argument, if present.
     Acts as a transducer if a transformer is given in list position.
     Also treats functions as functors and will compose them together"""
-    if isinstance(xs, collections.Mapping):
+    if isinstance(xs, getattr(collections, "abc", collections).Mapping):
         return dict([(k, f(v)) for k, v in xs.items()])
 
     return [f(x) for x in xs]

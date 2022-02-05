@@ -1,4 +1,4 @@
-from collections.abc import Iterable
+import collections
 from .is_ import is_
 from .curry import curry
 
@@ -9,7 +9,9 @@ def flatten_until(is_leaf, xs):
     and putting them in a new array, depth-first"""
 
     def _flatten_until(items):
-        if is_(Iterable, items) and not is_leaf(items):
+        if is_(
+            getattr(collections, "abc", collections).Iterable, items
+        ) and not is_leaf(items):
             for item in items:
                 for i in _flatten_until(item):
                     yield i

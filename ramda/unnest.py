@@ -8,7 +8,7 @@ def unnest(list):
     any Chain"""
     out = []
     for e in list:
-        if isinstance(e, collections.Sequence):
+        if isinstance(e, getattr(collections, "abc", collections).Sequence):
             out += e
         else:
             out.append(e)
