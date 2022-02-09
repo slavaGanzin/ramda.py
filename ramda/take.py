@@ -8,6 +8,7 @@ def take(n, list):
     Dispatches to the take method of the second argument, if present"""
     acc = []
 
+    n = int(n)
     if isinstance(list, str):
         return list[:n]
 
