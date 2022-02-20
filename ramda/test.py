@@ -5,4 +5,4 @@ import re
 @curry
 def test(pattern, string):
     """Determines whether a given string matches a given regular expression"""
-    return bool(re.search(pattern, string))
+    return bool(re.search(re.compile(pattern, re.MULTILINE), string))
