@@ -26,10 +26,10 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install nose
+          python -m pip install nose2
           pip install .
       - name: Nose
-        run: nosetests
+        run: nose2 -v
 
   lint:
     runs-on: ubuntu-latest

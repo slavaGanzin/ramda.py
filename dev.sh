@@ -1,3 +1,3 @@
 #!/usr/bin/fish
 
-inotifyrun . nosetests
+inotifyrun . nose2
