@@ -14,4 +14,7 @@ def concat(X, Y):
     if isinstance(X, getattr(collections, "abc", collections).Set):
         return X.union(Y)
 
+    if isinstance(Y, getattr(collections, "abc", collections).Set):
+        return Y.union(X)
+
     return X + Y
