@@ -1,4 +1,4 @@
-from ramda.private import *
+from ramda.private.asserts import *
 from ramda.test import test
 
 

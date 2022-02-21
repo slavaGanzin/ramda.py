@@ -1,6 +1,6 @@
 from ramda.call import call
 from ramda.add import add
-from ramda.private import *
+from ramda.private.asserts import *
 
 
 def test_call_curry():

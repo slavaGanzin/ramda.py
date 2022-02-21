@@ -1,5 +1,5 @@
 from ramda import add
-from ramda.private import assert_equal
+from ramda.private.asserts import assert_equal
 
 
 def test_add_nocurry():

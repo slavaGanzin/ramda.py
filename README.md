@@ -37,7 +37,7 @@ pip install ramda
 
 
 
-#Docs
+# Docs
 ```python
 T(*args)
     """A function that always returns true. Any passed in parameters are ignored"""
