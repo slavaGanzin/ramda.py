@@ -4,10 +4,8 @@ from subprocess import call
 from os import path
 
 
-class PasteurizeBuildCommand(build_py):
+class BuildCommand(build_py):
     def run(self):
-        call(["pip", "install", "future"])
-        call(["pasteurize", "./ramda"])
         build_py.run(self)
 
 
@@ -17,15 +15,15 @@ with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
 
 setup(
     name="ramda",
-    version="0.6.7",
+    version="0.7.0",
     description="Python clone of ramda.js (ramdajs.com)",
     url="http://github.com/slavaGanzin/ramda.py",
     author="Slava Ganzin",
     author_email="slava.ganzin@gmail.com",
     packages=["ramda", "ramda.private", "ramda.private.curry_spec"],
-    install_requires=["future", "toolz"],
+    install_requires=["toolz"],
     tests_require=["nose2", "coverage", "mock", "six"],
-    cmdclass={"build_py": PasteurizeBuildCommand},
+    cmdclass={"build_py": BuildCommand},
     long_description=long_description,
     long_description_content_type="text/markdown",
     zip_safe=False,
