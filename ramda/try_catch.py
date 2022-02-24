@@ -11,7 +11,7 @@ def try_catch(tryer, catcher):
     composition with this function, both the tryer and catcher functions
     must return the same type of results"""
 
-    if inspect.iscoroutinefunction(tryer):
+    if inspect.isawaitable(tryer):
 
         async def async_exe(*args):
             try:
