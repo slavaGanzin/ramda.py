@@ -1,4 +1,5 @@
 from toolz import curry
+import inspect
 
 
 @curry
@@ -10,10 +11,22 @@ def try_catch(tryer, catcher):
     composition with this function, both the tryer and catcher functions
     must return the same type of results"""
 
-    def exe(*args):
-        try:
-            return tryer(*args)
-        except Exception as e:
-            return catcher(e, *args)
+    if inspect.iscoroutinefunction(tryer):
 
-    return exe
+        async def async_exe(*args):
+            try:
+                return await tryer(*args)
+            except Exception as e:
+                return catcher(e, *args)
+
+        return async_exe
+
+    else:
+
+        def exe(*args):
+            try:
+                return tryer(*args)
+            except Exception as e:
+                return catcher(e, *args)
+
+        return exe
