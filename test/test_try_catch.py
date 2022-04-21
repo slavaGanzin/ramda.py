@@ -17,6 +17,6 @@ def test_try_catch():
         return x[0]
 
     assert_equal(await_(try_catch(asyncx, lambda e, a: e)([[1, 2, 3]])), [1, 2, 3])
-    # assert_equal(
-    #     isinstance(await_(try_catch(asyncx, lambda e, a: e)([])), IndexError), True
-    # )
+    assert_equal(
+        isinstance(await_(try_catch(asyncx, lambda e, a: e)([])), IndexError), True
+    )
