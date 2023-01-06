@@ -8,14 +8,16 @@ def memoize_with(key_generator, f):
     create the cache key under which the results of the function to be memoized
     will be stored. Care must be taken when implementing key generation to avoid
     clashes that may overwrite previous entries erroneously"""
-    cache = {}
 
-    def memoized(*args):
-        k = key_generator(*args)
-        try:
-            return cache[k]
-        except KeyError:
-            cache[k] = f(*args)
-            return cache[k]
+    def cache_closure():
+        cache = {}
 
-    return memoized
+        def memoized(*args):
+            k = key_generator(*args)
+            if k not in cache:
+                cache[k] = f(*args)
+
+            return cache[k]
+        return memoized
+
+    return cache_closure()
